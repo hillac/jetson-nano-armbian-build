@@ -1,0 +1,20 @@
+name: Build Armbian Image
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: armbian/build@main
+        with:
+          armbian_token: ${{ secrets.GITHUB_TOKEN }}
+          armbian_board: "jetson-nano"
+          armbian_release: "trixie"
+          armbian_target: "build"
+          armbian_ui: "minimal"
+          armbian_runner_clean: "yes"
