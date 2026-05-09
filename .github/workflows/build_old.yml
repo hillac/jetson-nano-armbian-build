@@ -1,0 +1,23 @@
+name: Build Armbian Jetson Nano 24.11-ish
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: armbian/build@main
+        with:
+          armbian_token: ${{ secrets.GITHUB_TOKEN }}
+          armbian_board: "jetson-nano"
+          armbian_release: "bookworm"
+          armbian_kernel_branch: "current"
+          armbian_branch: "v24.11.0-trunk.303"
+          armbian_version: "24.11.0-trunk"
+          armbian_target: "build"
+          armbian_ui: "minimal"
+          armbian_runner_clean: "yes"
