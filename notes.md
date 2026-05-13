@@ -1,0 +1,112 @@
+xz -dk Armbian-unofficial_24.11.1_Jetson-nano_bookworm_current_6.18.28.img.xz
+
+
+delete partitions and unmount
+sudo dd if=Armbian-unofficial_24.11.1_Jetson-nano_bookworm_current_6.18.28.img.xz of=/dev/sda bs=16M status=progress conv=fsync
+
+
+
+screen -L -Logfile jetson-armbian-24.log /dev/ttyUSB0 115200
+crtl + a k y to kill
+
+# editting grub on usb
+sudo mkdir -p /mnt/armbian
+sudo mount /dev/sda2 /mnt/armbian
+sudo vim /mnt/armbian/boot/grub/grub.cfg  
+sync
+sudo umount /mnt/armbian
+sudo eject /dev/sda
+
+got 23 to work by adding modprobe.blacklist=onboard_usb_hub usbcore.autosuspend=-1 systemd.unit=multi-user.target plymouth.enable=0 splash=0
+modprobe.blacklist=onboard_usb_hub is the one that actually worked
+
+idea, not tested:
+maybe change 26 to include:
+modprobe.blacklist=onboard_usb_hub usbcore.autosuspend=-1 usbcore.old_scheme_first=1 rootdelay=10 rootwait
+eg linux /boot/vmlinuz-6.18.25-current-arm64 root=UUID=d1f04c5d-3c52-425f-907c-0e0c721edd5b ro rootwait rootdelay=10 efi=noruntime console=ttyS0,115200n8 console=tty1 loglevel=8 ignore_loglevel modprobe.blacklist=onboard_usb_hub usbcore.autosuspend=-1 usbcore.old_scheme_first=1
+
+
+## mounting image
+sudo losetup --find --show --partscan Armbian.img
+lsblk /dev/loop2 #use returned loop device from last command
+sudo mkdir -p /mnt/armbian-img
+lsblk /dev/loop2 # find boot partition
+sudo mount /dev/loop2p2 /mnt/armbian-img # choose boot partition device
+### unmount
+sudo umount /mnt/armbian-img
+sudo losetup -d /dev/loop2
+
+# chatgpt:
+in 24 boot logs with initcall_debug show:
+calling  deferred_probe_initcall+0x0/0xc8 @ 1
+probe of 6000d000.gpio returned 517
+probe of 1003000.pcie returned -517
+tegra-pmc 7000e400.pmc: failed to get device resets: -517
+tegra-pmc 7000e400.pmc: failed to get resets for venc: -517
+probe of 7000e400.pmc returned 517
+
+6000d000.gpio  -> Tegra GPIO controller
+1003000.pcie   -> Tegra PCIe
+7000e400.pmc   -> Tegra PMC
+venc reset     -> video encoder reset line dependency
+The hang is a Tegra driver dependency deadlock, centered on PMC/GPIO/PCIe/reset handling. 
+So 6.18 is getting stuck before userspace, during deferred probe cleanup. That explains why changing rootfs, initrd, UUID, or userland will not fix it.
+
+Most likely cause
+
+The 6.18 kernel has a Tegra210 regression or bad config around one of these built-in drivers:
+
+CONFIG_TEGRA_PMC
+CONFIG_GPIO_TEGRA
+CONFIG_PCIE_TEGRA194 / CONFIG_PCI_TEGRA
+CONFIG_RESET_TEGRA
+CONFIG_TEGRA_HOST1X / display/media blocks
+
+The strongest clue is:
+
+tegra-pmc ... failed to get resets for venc
+
+Fix attempt:
+dtc -I dtb -O dts \
+  -o 6.18.dts \
+  /mnt/armbian/boot/armbian-dtb-6.18.28-current-arm64
+
+edit venc to:
+venc {
+    status = "disabled";
+    clocks = <0x03 0xe4 0x03 0x34>;
+    /* resets = <0x0d 0x0b 0x03 0x14 0x03 0x34>; */
+    #power-domain-cells = <0x00>;
+    phandle = <0x0f>;
+};
+
+dtc -I dts -O dtb -o armbian-dtb-6.18.28-current-arm64.patched 6.18.dts
+
+sudo cp -a /mnt/armbian/boot/armbian-dtb-6.18.28-current-arm64 \
+  /mnt/armbian/boot/armbian-dtb-6.18.28-current-arm64.bak2
+
+sudo cp armbian-dtb-6.18.28-current-arm64.patched \
+  /mnt/armbian/boot/armbian-dtb-6.18.28-current-arm64
+
+edit grub to:
+linux /boot/vmlinuz-6.18.28-current-arm64 root=UUID=0e31d646-3b63-40d1-8737-69e358cc7a73 ro efi=noruntime console=ttyS0,115200n8 console=tty1 rootwait fw_devlink=off deferred_probe_timeout=0 loglevel=8 ignore_loglevel
+
+sync
+
+this got much further into boot.
+
+can apparently removed console=tty1 to get shell on failed boot, havent tried
+
+venc {
+        /* status = "disabled"; */
+        clocks = <0x03 0xe4 0x03 0x34>;
+        /* resets = <0x0d 0x0b 0x03 0x14 0x03 0x34>; */
+        resets = <0x03 0x14 0x03 0x34>;
+        #power-domain-cells = <0x00>;
+        phandle = <0x0f>;
+};
+
+the above dts seems to let us boot.
+
+
+
