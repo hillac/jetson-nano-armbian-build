@@ -16,5 +16,5 @@ jobs:
           armbian_board: "jetson-nano"
           armbian_release: "trixie"
           armbian_target: "build"
-          armbian_ui: "minimal"
+          armbian_ui: "server"
           armbian_runner_clean: "yes"
