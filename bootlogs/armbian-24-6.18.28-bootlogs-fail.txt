@@ -1,0 +1,315 @@
+Loading initial ramdisk ...
+
+Loading device tree blob... /boot/armbian-dtb-6.18.28-current-arm64
+
+EFI stub: ERROR: FIRMWARE BUG: kernel image not aligned on 64k boundary
+
+
+[    0.000000] Booting Linux on physical CPU 0x0000000000 [0x411fd071]
+[    0.000000] Linux version 6.18.28-current-arm64 (build@armbian) (aarch64-linux-gnu-gcc (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0, GNU ld (GNU Binutils for Ubuntu) 2.42) #3 SMP Fri May  8 06:40:23 UTC 2026
+[    0.000000] KASLR disabled due to lack of seed
+[    0.000000] Machine model: NVIDIA Jetson Nano Developer Kit
+[    0.000000] efi: EFI v2.8 by Das U-Boot
+[    0.000000] efi: RTPROP=0xfb5f5040 SMBIOS=0xfb5ec000 MEMRESERVE=0xc88bf040 
+[    0.000000] OF: reserved mem: Reserved memory: No reserved-memory node in the DT
+[    0.000000] NUMA: Faking a node at [mem 0x0000000040001000-0x000000017f1fffff]
+[    0.000000] NODE_DATA(0) allocated [mem 0x17e9a4c80-0x17e9a9abf]
+[    0.000000] Zone ranges:
+[    0.000000]   DMA      [mem 0x0000000040001000-0x00000000ffffffff]
+[    0.000000]   DMA32    empty
+[    0.000000]   Normal   [mem 0x0000000100000000-0x000000017f1fffff]
+[    0.000000]   Device   empty
+[    0.000000] Movable zone start for each node
+[    0.000000] Early memory node ranges
+[    0.000000]   node   0: [mem 0x0000000040001000-0x000000004003ffff]
+[    0.000000]   node   0: [mem 0x0000000080000000-0x000000008001ffff]
+[    0.000000]   node   0: [mem 0x0000000080020000-0x00000000afffffff]
+[    0.000000]   node   0: [mem 0x00000000b0000000-0x00000000b01fffff]
+[    0.000000]   node   0: [mem 0x00000000b0200000-0x00000000fb5bafff]
+[    0.000000]   node   0: [mem 0x00000000fb5bb000-0x00000000fb5bcfff]
+[    0.000000]   node   0: [mem 0x00000000fb5bd000-0x00000000fb5e5fff]
+[    0.000000]   node   0: [mem 0x00000000fb5e6000-0x00000000fb5eafff]
+[    0.000000]   node   0: [mem 0x00000000fb5eb000-0x00000000fb5ebfff]
+[    0.000000]   node   0: [mem 0x00000000fb5ec000-0x00000000fb5ecfff]
+[    0.000000]   node   0: [mem 0x00000000fb5ed000-0x00000000fb5eefff]
+[    0.000000]   node   0: [mem 0x00000000fb5ef000-0x00000000fb5f2fff]
+[    0.000000]   node   0: [mem 0x00000000fb5f3000-0x00000000fb5f4fff]
+[    0.000000]   node   0: [mem 0x00000000fb5f5000-0x00000000fb5f9fff]
+[    0.000000]   node   0: [mem 0x00000000fb5fa000-0x00000000fed1ffff]
+[    0.000000]   node   0: [mem 0x00000000fed20000-0x00000000fed2ffff]
+[    0.000000]   node   0: [mem 0x00000000fed30000-0x00000000fedfffff]
+[    0.000000]   node   0: [mem 0x0000000100000000-0x000000017f1fffff]
+[    0.000000] Initmem setup node 0 [mem 0x0000000040001000-0x000000017f1fffff]
+[    0.000000] On node 0, zone DMA: 1 pages in unavailable ranges
+[    0.000000] On node 0, zone DMA: 32704 pages in unavailable ranges
+[    0.000000] On node 0, zone Normal: 4608 pages in unavailable ranges
+[    0.000000] On node 0, zone Normal: 3584 pages in unavailable ranges
+[    0.000000] cma: Reserved 32 MiB at 0x00000000fcc00000
+[    0.000000] psci: probing for conduit method from DT.
+[    0.000000] psci: PSCIv1.0 detected in firmware.
+[    0.000000] psci: Using standard PSCI v0.2 function IDs
+[    0.000000] psci: MIGRATE_INFO_TYPE not supported.
+[    0.000000] psci: SMC Calling Convention v1.1
+[    0.000000] percpu: Embedded 34 pages/cpu s102232 r8192 d28840 u139264
+[    0.000000] Detected PIPT I-cache on CPU0
+[    0.000000] CPU features: detected: Spectre-v2
+[    0.000000] CPU features: detected: Spectre-v3a
+[    0.000000] CPU features: detected: Spectre-BHB
+[    0.000000] CPU features: detected: ARM erratum 834220
+[    0.000000] CPU features: detected: ARM erratum 1742098
+[    0.000000] CPU features: detected: ARM erratum 832075
+[    0.000000] CPU features: detected: ARM errata 1165522, 1319367, or 1530923
+[    0.000000] alternatives: applying boot alternatives
+[    0.000000] Kernel command line: BOOT_IMAGE=/boot/vmlinuz-6.18.28-current-arm64 root=UUID=0e31d646-3b63-40d1-8737-69e358cc7a73 ro efi=noruntime console=ttyS0,115200n8 console=tty1 splash plymouth.ignore-serial-consoles i915.force_probe=*
+[    0.000000] Unknown kernel command line parameters "splash", will be passed to user space.
+[    0.000000] printk: log buffer data + meta data: 262144 + 917504 = 1179648 bytes
+[    0.000000] Dentry cache hash table entries: 524288 (order: 10, 4194304 bytes, linear)
+[    0.000000] Inode-cache hash table entries: 262144 (order: 9, 2097152 bytes, linear)
+[    0.000000] software IO TLB: area num 4.
+[    0.000000] software IO TLB: mapped [mem 0x00000000f75bb000-0x00000000fb5bb000] (64MB)
+[    0.000000] Fallback order for Node 0: 0 
+[    0.000000] Built 1 zonelists, mobility grouping on.  Total pages: 1040447
+[    0.000000] Policy zone: Normal
+[    0.000000] mem auto-init: stack:all(zero), heap alloc:on, heap free:off
+[    0.000000] SLUB: HWalign=64, Order=0-3, MinObjects=0, CPUs=4, Nodes=1
+[    0.000000] ftrace: allocating 58929 entries in 232 pages
+[    0.000000] ftrace: allocated 232 pages with 4 groups
+[    0.000000] rcu: Hierarchical RCU implementation.
+[    0.000000] rcu: 	RCU event tracing is enabled.
+[    0.000000] rcu: 	RCU restricting CPUs from NR_CPUS=256 to nr_cpu_ids=4.
+[    0.000000] 	Rude variant of Tasks RCU enabled.
+[    0.000000] 	Tracing variant of Tasks RCU enabled.
+[    0.000000] rcu: RCU calculated value of scheduler-enlistment delay is 25 jiffies.
+[    0.000000] rcu: Adjusting geometry for rcu_fanout_leaf=16, nr_cpu_ids=4
+[    0.000000] RCU Tasks Rude: Setting shift to 2 and lim to 1 rcu_task_cb_adjust=1 rcu_task_cpu_ids=4.
+[    0.000000] RCU Tasks Trace: Setting shift to 2 and lim to 1 rcu_task_cb_adjust=1 rcu_task_cpu_ids=4.
+[    0.000000] NR_IRQS: 64, nr_irqs: 64, preallocated irqs: 0
+[    0.000000] Root IRQ handler: gic_handle_irq
+[    0.000000] GIC: Using split EOI/Deactivate mode
+[    0.000000] /interrupt-controller@60004000: 192 interrupts forwarded to /interrupt-controller@50041000
+[    0.000000] rcu: srcu_init: Setting srcu_struct sizes based on contention.
+[    0.000000] tegra-clk-debug:pll_a_out0_out_adsp: connection ID is greater than 16
+[    0.000000] tegra-clk-debug:dmic1_sync_clk_mux: connection ID is greater than 16
+[    0.000000] tegra-clk-debug:dmic2_sync_clk_mux: connection ID is greater than 16
+[    0.000000] tegra-clk-debug:dmic3_sync_clk_mux: connection ID is greater than 16
+[    0.000001] sched_clock: 32 bits at 1000kHz, resolution 1000ns, wraps every 2147483647500ns
+[    0.000015] clocksource: timer_us: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 1911260446275 ns
+[    0.000365] clocksource: tegra_suspend_timer: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 1911260446275000 ns
+[    0.001761] arch_timer: cp15 timer running at 19.20MHz (phys).
+[    0.001772] clocksource: arch_sys_counter: mask: 0xffffffffffffff max_cycles: 0x46d987e47, max_idle_ns: 440795202767 ns
+[    0.001781] sched_clock: 56 bits at 19MHz, resolution 52ns, wraps every 4398046511078ns
+[    0.002496] Console: colour dummy device 80x25
+[    0.002518] printk: legacy console [tty1] enabled
+[    0.003720] Calibrating delay loop (skipped), value calculated using timer frequency.. 38.40 BogoMIPS (lpj=76800)
+[    0.003747] pid_max: default: 32768 minimum: 301
+[    0.005808] LSM: initializing lsm=capability,yama,apparmor,ima,evm
+[    0.007310] Yama: becoming mindful.
+[    0.007742] AppArmor: AppArmor initialized
+[    0.009016] Mount-cache hash table entries: 8192 (order: 4, 65536 bytes, linear)
+[    0.009065] Mountpoint-cache hash table entries: 8192 (order: 4, 65536 bytes, linear)
+[    0.017944] rcu: Hierarchical SRCU implementation.
+[    0.017986] rcu: 	Max phase no-delay instances is 1000.
+[    0.018332] Timer migration: 1 hierarchy levels; 8 children per group; 1 crossnode level
+[    0.021278] Speedo Revision 4
+[    0.021330] Tegra Revision: A02 SKU: 143 CPU Process: 0 SoC Process: 1
+[    0.021660] tegra-pmc: access to PMC is restricted to TZ
+[    0.022497] EFI runtime services will be disabled.
+[    0.023173] smp: Bringing up secondary CPUs ...
+[    0.024198] Detected PIPT I-cache on CPU1
+[    0.024504] CPU1: Booted secondary processor 0x0000000001 [0x411fd071]
+[    0.025702] Detected PIPT I-cache on CPU2
+[    0.025897] CPU2: Booted secondary processor 0x0000000002 [0x411fd071]
+[    0.026904] Detected PIPT I-cache on CPU3
+[    0.027086] CPU3: Booted secondary processor 0x0000000003 [0x411fd071]
+[    0.027201] smp: Brought up 1 node, 4 CPUs
+[    0.027260] SMP: Total of 4 processors activated.
+[    0.027270] CPU: All CPU(s) started at EL2
+[    0.027312] CPU features: detected: 32-bit EL0 Support
+[    0.027323] CPU features: detected: 32-bit EL1 Support
+[    0.027335] CPU features: detected: CRC32 instructions
+[    0.027355] CPU features: detected: PMUv3
+[    0.027425] alternatives: applying system-wide alternatives
+[    0.032144] CPU features: emulated: Privileged Access Never (PAN) using TTBR0_EL1 switching
+[    0.032659] Memory: 3692116K/4161788K available (18688K kernel code, 4118K rwdata, 14604K rodata, 11136K init, 935K bss, 431136K reserved, 32768K cma-reserved)
+[    0.034595] devtmpfs: initialized
+[    0.050971] clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 7645041785100000 ns
+[    0.051078] posixtimers hash table entries: 2048 (order: 3, 32768 bytes, linear)
+[    0.051220] futex hash table entries: 1024 (65536 bytes on 1 NUMA nodes, total 64 KiB, linear).
+[    0.052036] 20336 pages in range for non-PLT usage
+[    0.052054] 511856 pages in range for PLT usage
+[    0.053276] pinctrl core: initialized pinctrl subsystem
+[    0.054440] SMBIOS 3.0 present.
+[    0.054472] DMI: nvidia p3450-0000/p3450-0000, BIOS 2020.04-g4335beb692 06/11/2024
+[    0.054494] DMI: Memory slots populated: 0/0
+[    0.059301] NET: Registered PF_NETLINK/PF_ROUTE protocol family
+[    0.061399] DMA: preallocated 512 KiB GFP_KERNEL pool for atomic allocations
+[    0.061731] DMA: preallocated 512 KiB GFP_KERNEL|GFP_DMA pool for atomic allocations
+[    0.062300] DMA: preallocated 512 KiB GFP_KERNEL|GFP_DMA32 pool for atomic allocations
+[    0.062385] audit: initializing netlink subsys (disabled)
+[    0.062688] audit: type=2000 audit(0.060:1): state=initialized audit_enabled=0 res=1
+[    0.065893] thermal_sys: Registered thermal governor 'fair_share'
+[    0.065906] thermal_sys: Registered thermal governor 'bang_bang'
+[    0.065929] thermal_sys: Registered thermal governor 'step_wise'
+[    0.065939] thermal_sys: Registered thermal governor 'user_space'
+[    0.065949] thermal_sys: Registered thermal governor 'power_allocator'
+[    0.066051] cpuidle: using governor ladder
+[    0.066095] cpuidle: using governor menu
+[    0.066343] hw-breakpoint: found 6 breakpoint and 4 watchpoint registers.
+[    0.066478] ASID allocator initialised with 65536 entries
+[    0.068292] Serial: AMBA PL011 UART driver
+[    0.089225] /aconnect@702c0000/ahub@702d0800: Fixed dependency cycle(s) with /aconnect@702c0000/ahub@702d0800/processing-engine@702d8400
+[    0.089292] /aconnect@702c0000/ahub@702d0800: Fixed dependency cycle(s) with /aconnect@702c0000/ahub@702d0800/processing-engine@702d8000
+[    0.089324] /aconnect@702c0000/ahub@702d0800: Fixed dependency cycle(s) with /aconnect@702c0000/ahub@702d0800/amixer@702dbb00
+[    0.089353] /aconnect@702c0000/ahub@702d0800: Fixed dependency cycle(s) with /aconnect@702c0000/ahub@702d0800/adx@702d3900
+[    0.089380] /aconnect@702c0000/ahub@702d0800: Fixed dependency cycle(s) with /aconnect@702c0000/ahub@702d0800/adx@702d3800
+[    0.089408] /aconnect@702c0000/ahub@702d0800: Fixed dependency cycle(s) with /aconnect@702c0000/ahub@702d0800/amx@702d3100
+[    0.089436] /aconnect@702c0000/ahub@702d0800: Fixed dependency cycle(s) with /aconnect@702c0000/ahub@702d0800/amx@702d3000
+[    0.089463] /aconnect@702c0000/ahub@702d0800: Fixed dependency cycle(s) with /aconnect@702c0000/ahub@702d0800/mvc@702da200
+[    0.089491] /aconnect@702c0000/ahub@702d0800: Fixed dependency cycle(s) with /aconnect@702c0000/ahub@702d0800/mvc@702da000
+[    0.089519] /aconnect@702c0000/ahub@702d0800: Fixed dependency cycle(s) with /aconnect@702c0000/ahub@702d0800/sfc@702d2600
+[    0.089547] /aconnect@702c0000/ahub@702d0800: Fixed dependency cycle(s) with /aconnect@702c0000/ahub@702d0800/sfc@702d2400
+[    0.089575] /aconnect@702c0000/ahub@702d0800: Fixed dependency cycle(s) with /aconnect@702c0000/ahub@702d0800/sfc@702d2200
+[    0.089602] /aconnect@702c0000/ahub@702d0800: Fixed dependency cycle(s) with /aconnect@702c0000/ahub@702d0800/sfc@702d2000
+[    0.089631] /aconnect@702c0000/ahub@702d0800: Fixed dependency cycle(s) with /aconnect@702c0000/ahub@702d0800/dmic@702d4100
+[    0.089659] /aconnect@702c0000/ahub@702d0800: Fixed dependency cycle(s) with /aconnect@702c0000/ahub@702d0800/dmic@702d4000
+[    0.089688] /aconnect@702c0000/ahub@702d0800: Fixed dependency cycle(s) with /aconnect@702c0000/ahub@702d0800/i2s@702d1300
+[    0.089716] /aconnect@702c0000/ahub@702d0800: Fixed dependency cycle(s) with /aconnect@702c0000/ahub@702d0800/i2s@702d1200
+[    0.089744] /aconnect@702c0000/ahub@702d0800: Fixed dependency cycle(s) with /aconnect@702c0000/ahub@702d0800/admaif@702d0000
+[    0.089824] /aconnect@702c0000/ahub@702d0800/admaif@702d0000: Fixed dependency cycle(s) with /aconnect@702c0000/ahub@702d0800
+[    0.089926] /aconnect@702c0000/ahub@702d0800/i2s@702d1200: Fixed dependency cycle(s) with /aconnect@702c0000/ahub@702d0800
+[    0.090011] /aconnect@702c0000/ahub@702d0800/i2s@702d1300: Fixed dependency cycle(s) with /aconnect@702c0000/ahub@702d0800
+[    0.090098] /aconnect@702c0000/ahub@702d0800/sfc@702d2000: Fixed dependency cycle(s) with /aconnect@702c0000/ahub@702d0800
+[    0.090182] /aconnect@702c0000/ahub@702d0800/sfc@702d2200: Fixed dependency cycle(s) with /aconnect@702c0000/ahub@702d0800
+[    0.090266] /aconnect@702c0000/ahub@702d0800/sfc@702d2400: Fixed dependency cycle(s) with /aconnect@702c0000/ahub@702d0800
+[    0.090349] /aconnect@702c0000/ahub@702d0800/sfc@702d2600: Fixed dependency cycle(s) with /aconnect@702c0000/ahub@702d0800
+[    0.090432] /aconnect@702c0000/ahub@702d0800/amx@702d3000: Fixed dependency cycle(s) with /aconnect@702c0000/ahub@702d0800
+[    0.090520] /aconnect@702c0000/ahub@702d0800/amx@702d3100: Fixed dependency cycle(s) with /aconnect@702c0000/ahub@702d0800
+[    0.090609] /aconnect@702c0000/ahub@702d0800/adx@702d3800: Fixed dependency cycle(s) with /aconnect@702c0000/ahub@702d0800
+[    0.090698] /aconnect@702c0000/ahub@702d0800/adx@702d3900: Fixed dependency cycle(s) with /aconnect@702c0000/ahub@702d0800
+[    0.090787] /aconnect@702c0000/ahub@702d0800/dmic@702d4000: Fixed dependency cycle(s) with /aconnect@702c0000/ahub@702d0800
+[    0.090870] /aconnect@702c0000/ahub@702d0800/dmic@702d4100: Fixed dependency cycle(s) with /aconnect@702c0000/ahub@702d0800
+[    0.090955] /aconnect@702c0000/ahub@702d0800/processing-engine@702d8000: Fixed dependency cycle(s) with /aconnect@702c0000/ahub@702d0800
+[    0.091041] /aconnect@702c0000/ahub@702d0800/processing-engine@702d8400: Fixed dependency cycle(s) with /aconnect@702c0000/ahub@702d0800
+[    0.091129] /aconnect@702c0000/ahub@702d0800/mvc@702da000: Fixed dependency cycle(s) with /aconnect@702c0000/ahub@702d0800
+[    0.091212] /aconnect@702c0000/ahub@702d0800/mvc@702da200: Fixed dependency cycle(s) with /aconnect@702c0000/ahub@702d0800
+[    0.091294] /aconnect@702c0000/ahub@702d0800/amixer@702dbb00: Fixed dependency cycle(s) with /aconnect@702c0000/ahub@702d0800
+[    0.104775] HugeTLB: registered 1.00 GiB page size, pre-allocated 0 pages
+[    0.104820] HugeTLB: 0 KiB vmemmap can be freed for a 1.00 GiB page
+[    0.104834] HugeTLB: registered 32.0 MiB page size, pre-allocated 0 pages
+[    0.104845] HugeTLB: 0 KiB vmemmap can be freed for a 32.0 MiB page
+[    0.104856] HugeTLB: registered 2.00 MiB page size, pre-allocated 0 pages
+[    0.104866] HugeTLB: 0 KiB vmemmap can be freed for a 2.00 MiB page
+[    0.104876] HugeTLB: registered 64.0 KiB page size, pre-allocated 0 pages
+[    0.104886] HugeTLB: 0 KiB vmemmap can be freed for a 64.0 KiB page
+[    0.115042] fbcon: Taking over console
+[    0.115152] ACPI: Interpreter disabled.
+[    0.117501] iommu: Default domain type: Translated
+[    0.117533] iommu: DMA domain TLB invalidation policy: strict mode
+[    0.121932] SCSI subsystem initialized
+[    0.122442] usbcore: registered new interface driver usbfs
+[    0.122489] usbcore: registered new interface driver hub
+[    0.122546] usbcore: registered new device driver usb
+[    0.122892] pps_core: LinuxPPS API ver. 1 registered
+[    0.122903] pps_core: Software ver. 5.3.6 - Copyright 2005-2007 Rodolfo Giometti <giometti@linux.it>
+[    0.122926] PTP clock support registered
+[    0.123479] EDAC MC: Ver: 3.0.0
+[    0.123928] scmi_core: SCMI protocol bus registered
+[    0.125993] NetLabel: Initializing
+[    0.126026] NetLabel:  domain hash size = 128
+[    0.126035] NetLabel:  protocols = UNLABELED CIPSOv4 CALIPSO
+[    0.126109] NetLabel:  unlabeled traffic allowed by default
+[    0.126671] vgaarb: loaded
+[    0.128806] clocksource: Switched to clocksource arch_sys_counter
+[    0.131466] VFS: Disk quotas dquot_6.6.0
+[    0.131625] VFS: Dquot-cache hash table entries: 512 (order 0, 4096 bytes)
+[    0.133680] AppArmor: AppArmor Filesystem Enabled
+[    0.133859] pnp: PnP ACPI: disabled
+[    0.143744] NET: Registered PF_INET protocol family
+[    0.144239] IP idents hash table entries: 65536 (order: 7, 524288 bytes, linear)
+[    0.209268] tcp_listen_portaddr_hash hash table entries: 2048 (order: 3, 32768 bytes, linear)
+[    0.209465] Table-perturb hash table entries: 65536 (order: 6, 262144 bytes, linear)
+[    0.209632] TCP established hash table entries: 32768 (order: 6, 262144 bytes, linear)
+[    0.210238] TCP bind hash table entries: 32768 (order: 8, 1048576 bytes, linear)
+[    0.211080] TCP: Hash tables configured (established 32768 bind 32768)
+[    0.211662] MPTCP token hash table entries: 4096 (order: 5, 98304 bytes, linear)
+[    0.212023] UDP hash table entries: 2048 (order: 5, 131072 bytes, linear)
+[    0.212249] UDP-Lite hash table entries: 2048 (order: 5, 131072 bytes, linear)
+[    0.212872] NET: Registered PF_UNIX/PF_LOCAL protocol family
+[    0.212992] NET: Registered PF_XDP protocol family
+[    0.213041] PCI: CLS 0 bytes, default 64
+[    0.213413] Trying to unpack rootfs image as initramfs...
+[    0.223195] kvm [1]: nv: 568 coarse grained trap handlers
+[    0.223886] kvm [1]: Guests without required CPU erratum workarounds can deadlock system!
+[    0.223886] Only trusted guests should be used on this system.
+[    0.223912] kvm [1]: IPA Size Limit: 44 bits
+[    0.226598] kvm [1]: vgic interrupt IRQ9
+[    0.226684] kvm [1]: Hyp nVHE mode initialized successfully
+[    0.230321] Initialise system trusted keyrings
+[    0.230433] Key type blacklist registered
+[    0.230907] workingset: timestamp_bits=40 max_order=20 bucket_order=0
+[    0.238515] squashfs: version 4.0 (2009/01/31) Phillip Lougher
+[    0.241200] fuse: init (API version 7.45)
+[    0.242146] integrity: Platform Keyring initialized
+[    0.286326] Key type asymmetric registered
+[    0.286380] Asymmetric key parser 'x509' registered
+[    0.286716] Block layer SCSI generic (bsg) driver version 0.4 loaded (major 241)
+[    0.287116] io scheduler mq-deadline registered
+[    0.296161] ledtrig-cpu: registered to indicate activity on CPUs
+[    0.322791] tegra-apbdma 60020000.dma: Tegra20 APB DMA driver registered 32 channels
+[    0.326536] tegra-pmc 7000e400.pmc: i2c-thermtrip node not found, emergency thermal reset disabled.
+[    0.327740] tegra-pmc 7000e400.pmc: failed to get device resets: -517
+[    0.327766] tegra-pmc 7000e400.pmc: failed to get resets for venc: -517
+[    0.331748] Serial: 8250/16550 driver, 32 ports, IRQ sharing enabled
+[    0.345313] printk: legacy console [ttyS0] disabled
+[    0.345854] 70006000.serial: ttyS0 at MMIO 0x70006000 (irq = 58, base_baud = 25500000) is a Tegra
+[    0.345937] printk: legacy console [ttyS0] enabled
+[    2.077118] msm_serial: driver initialized
+[    2.090397] loop: module loaded
+[    2.094005] tun: Universal TUN/TAP device driver, 1.6
+[    2.097504] PPP generic driver version 2.4.2
+[    2.102397] hv_vmbus: registering driver hyperv_keyboard
+[    2.106870] mousedev: PS/2 mouse device common for all mice
+[    2.113256] i2c_dev: i2c /dev entries driver
+[    2.117760] device-mapper: core: CONFIG_IMA_DISABLE_HTABLE is disabled. Duplicate IMA measurements will not be recorded in the IMA log.
+[    2.128422] device-mapper: uevent: version 1.0.3
+[    2.133436] device-mapper: ioctl: 4.50.0-ioctl (2025-04-28) initialised: dm-devel@lists.linux.dev
+[    2.144944] cpufreq: cpufreq_policy_online: CPU0: Running at unlisted initial frequency: 1017600 kHz, changing to: 1020000 kHz
+[    2.159714] hw perfevents: enabled with armv8_cortex_a57 PMU driver, 7 (0,8000003f) counters available
+[    2.169883] drop_monitor: Initializing network drop monitor service
+[    2.174627] NET: Registered PF_INET6 protocol family
+[    2.181154] Segment Routing with IPv6
+[    2.182513] In-situ OAM (IOAM) with IPv6
+[    2.186708] NET: Registered PF_PACKET protocol family
+[    2.191534] bridge: filtering via arp/ip/ip6tables is no longer available by default. Update your scripts to load br_netfilter if you need this.
+[    2.205084] Key type dns_resolver registered
+[    2.216182] registered taskstats version 1
+[    2.221896] Loading compiled-in X.509 certificates
+[    2.235289] Demotion targets for Node 0: null
+[    2.238569] Key type .fscrypt registered
+[    2.242511] Key type fscrypt-provisioning registered
+[    5.978994] Freeing initrd memory: 229448K
+[    6.080747] Key type encrypted registered
+[    6.082471] AppArmor: AppArmor sha256 policy hashing enabled
+[    6.088156] ima: No TPM chip found, activating TPM-bypass!
+[    6.093666] ima: Allocated hash algorithm: sha1
+[    6.098115] ima: No architecture policies found
+[    6.102672] evm: Initialising EVM extended attributes:
+[    6.107677] evm: security.selinux
+[    6.110971] evm: security.SMACK64
+[    6.114260] evm: security.SMACK64EXEC
+[    6.117899] evm: security.SMACK64TRANSMUTE
+[    6.121973] evm: security.SMACK64MMAP
+[    6.125617] evm: security.apparmor
+[    6.128993] evm: security.ima
+[    6.131935] evm: security.capability
+[    6.135493] evm: HMAC attrs: 0x1
+[    6.158793] tegra-pmc 7000e400.pmc: i2c-thermtrip node not found, emergency thermal reset disabled.
+[    6.166460] tegra-pmc 7000e400.pmc: failed to get device resets: -517
+[    6.171937] tegra-pmc 7000e400.pmc: failed to get resets for venc: -517
+[    6.181694] tegra-pmc 7000e400.pmc: i2c-thermtrip node not found, emergency thermal reset disabled.
+[    6.188979] tegra-pmc 7000e400.pmc: failed to get device resets: -517
+[    6.194852] tegra-pmc 7000e400.pmc: failed to get resets for venc: -517
+[    6.203796] tegra-pmc 7000e400.pmc: i2c-thermtrip node not found, emergency thermal reset disabled.
+[    6.210908] tegra-pmc 7000e400.pmc: failed to get device resets: -517
+[    6.216895] tegra-pmc 7000e400.pmc: failed to get resets for venc: -517
+[    6.225267] tegra-pmc 7000e400.pmc: i2c-thermtrip node not found, emergency thermal reset disabled.

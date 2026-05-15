@@ -1,0 +1,1752 @@
+Loading initial ramdisk ...
+
+Loading device tree blob... /boot/armbian-dtb-6.18.28-current-arm64
+
+EFI stub: ERROR: FIRMWARE BUG: kernel image not aligned on 64k boundary
+
+
+[    0.000000] Booting Linux on physical CPU 0x0000000000 [0x411fd071]
+[    0.000000] Linux version 6.18.28-current-arm64 (build@armbian) (aarch64-linux-gnu-gcc (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0, GNU ld (GNU Binutils for Ubuntu) 2.42) #3 SMP Fri May  8 06:40:23 UTC 2026
+[    0.000000] KASLR disabled due to lack of seed
+[    0.000000] Machine model: NVIDIA Jetson Nano Developer Kit
+[    0.000000] printk: debug: ignoring loglevel setting.
+[    0.000000] efi: EFI v2.8 by Das U-Boot
+[    0.000000] efi: RTPROP=0xfb5f5040 SMBIOS=0xfb5ec000 MEMRESERVE=0xc88bf040 
+[    0.000000] OF: reserved mem: Reserved memory: No reserved-memory node in the DT
+[    0.000000] NUMA: Faking a node at [mem 0x0000000040001000-0x000000017f1fffff]
+[    0.000000] NODE_DATA(0) allocated [mem 0x17e9a4c80-0x17e9a9abf]
+[    0.000000] Zone ranges:
+[    0.000000]   DMA      [mem 0x0000000040001000-0x00000000ffffffff]
+[    0.000000]   DMA32    empty
+[    0.000000]   Normal   [mem 0x0000000100000000-0x000000017f1fffff]
+[    0.000000]   Device   empty
+[    0.000000] Movable zone start for each node
+[    0.000000] Early memory node ranges
+[    0.000000]   node   0: [mem 0x0000000040001000-0x000000004003ffff]
+[    0.000000]   node   0: [mem 0x0000000080000000-0x000000008001ffff]
+[    0.000000]   node   0: [mem 0x0000000080020000-0x00000000afffffff]
+[    0.000000]   node   0: [mem 0x00000000b0000000-0x00000000b01fffff]
+[    0.000000]   node   0: [mem 0x00000000b0200000-0x00000000fb5bafff]
+[    0.000000]   node   0: [mem 0x00000000fb5bb000-0x00000000fb5bcfff]
+[    0.000000]   node   0: [mem 0x00000000fb5bd000-0x00000000fb5e5fff]
+[    0.000000]   node   0: [mem 0x00000000fb5e6000-0x00000000fb5eafff]
+[    0.000000]   node   0: [mem 0x00000000fb5eb000-0x00000000fb5ebfff]
+[    0.000000]   node   0: [mem 0x00000000fb5ec000-0x00000000fb5ecfff]
+[    0.000000]   node   0: [mem 0x00000000fb5ed000-0x00000000fb5eefff]
+[    0.000000]   node   0: [mem 0x00000000fb5ef000-0x00000000fb5f2fff]
+[    0.000000]   node   0: [mem 0x00000000fb5f3000-0x00000000fb5f4fff]
+[    0.000000]   node   0: [mem 0x00000000fb5f5000-0x00000000fb5f9fff]
+[    0.000000]   node   0: [mem 0x00000000fb5fa000-0x00000000fed1ffff]
+[    0.000000]   node   0: [mem 0x00000000fed20000-0x00000000fed2ffff]
+[    0.000000]   node   0: [mem 0x00000000fed30000-0x00000000fedfffff]
+[    0.000000]   node   0: [mem 0x0000000100000000-0x000000017f1fffff]
+[    0.000000] Initmem setup node 0 [mem 0x0000000040001000-0x000000017f1fffff]
+[    0.000000] On node 0, zone DMA: 1 pages in unavailable ranges
+[    0.000000] On node 0, zone DMA: 32704 pages in unavailable ranges
+[    0.000000] On node 0, zone Normal: 4608 pages in unavailable ranges
+[    0.000000] On node 0, zone Normal: 3584 pages in unavailable ranges
+[    0.000000] cma: Reserved 32 MiB at 0x00000000fcc00000
+[    0.000000] psci: probing for conduit method from DT.
+[    0.000000] psci: PSCIv1.0 detected in firmware.
+[    0.000000] psci: Using standard PSCI v0.2 function IDs
+[    0.000000] psci: MIGRATE_INFO_TYPE not supported.
+[    0.000000] psci: SMC Calling Convention v1.1
+[    0.000000] percpu: Embedded 34 pages/cpu s102232 r8192 d28840 u139264
+[    0.000000] pcpu-alloc: s102232 r8192 d28840 u139264 alloc=34*4096
+[    0.000000] pcpu-alloc: [0] 0 [0] 1 [0] 2 [0] 3 
+[    0.000000] Detected PIPT I-cache on CPU0
+[    0.000000] CPU features: detected: Spectre-v2
+[    0.000000] CPU features: detected: Spectre-v3a
+[    0.000000] CPU features: detected: Spectre-BHB
+[    0.000000] CPU features: detected: ARM erratum 834220
+[    0.000000] CPU features: detected: ARM erratum 1742098
+[    0.000000] CPU features: detected: ARM erratum 832075
+[    0.000000] CPU features: detected: ARM errata 1165522, 1319367, or 1530923
+[    0.000000] alternatives: applying boot alternatives
+[    0.000000] Kernel command line: BOOT_IMAGE=/boot/vmlinuz-6.18.28-current-arm64 root=UUID=0e31d646-3b63-40d1-8737-69e358cc7a73 ro efi=noruntime console=ttyS0,115200n8 rootwait fw_devlink=off deferred_probe_timeout=0 loglevel=8 ignore_loglevel modprobe.blacklist=onboard_usb_hub usbcore.autosuspend=-1
+[    0.000000] printk: log buffer data + meta data: 262144 + 917504 = 1179648 bytes
+[    0.000000] Dentry cache hash table entries: 524288 (order: 10, 4194304 bytes, linear)
+[    0.000000] Inode-cache hash table entries: 262144 (order: 9, 2097152 bytes, linear)
+[    0.000000] software IO TLB: area num 4.
+[    0.000000] software IO TLB: mapped [mem 0x00000000f75bb000-0x00000000fb5bb000] (64MB)
+[    0.000000] Fallback order for Node 0: 0 
+[    0.000000] Built 1 zonelists, mobility grouping on.  Total pages: 1040447
+[    0.000000] Policy zone: Normal
+[    0.000000] mem auto-init: stack:all(zero), heap alloc:on, heap free:off
+[    0.000000] SLUB: HWalign=64, Order=0-3, MinObjects=0, CPUs=4, Nodes=1
+[    0.000000] ftrace: allocating 58929 entries in 232 pages
+[    0.000000] ftrace: allocated 232 pages with 4 groups
+[    0.000000] rcu: Hierarchical RCU implementation.
+[    0.000000] rcu: 	RCU event tracing is enabled.
+[    0.000000] rcu: 	RCU restricting CPUs from NR_CPUS=256 to nr_cpu_ids=4.
+[    0.000000] 	Rude variant of Tasks RCU enabled.
+[    0.000000] 	Tracing variant of Tasks RCU enabled.
+[    0.000000] rcu: RCU calculated value of scheduler-enlistment delay is 25 jiffies.
+[    0.000000] rcu: Adjusting geometry for rcu_fanout_leaf=16, nr_cpu_ids=4
+[    0.000000] RCU Tasks Rude: Setting shift to 2 and lim to 1 rcu_task_cb_adjust=1 rcu_task_cpu_ids=4.
+[    0.000000] RCU Tasks Trace: Setting shift to 2 and lim to 1 rcu_task_cb_adjust=1 rcu_task_cpu_ids=4.
+[    0.000000] NR_IRQS: 64, nr_irqs: 64, preallocated irqs: 0
+[    0.000000] Root IRQ handler: gic_handle_irq
+[    0.000000] GIC: Using split EOI/Deactivate mode
+[    0.000000] /interrupt-controller@60004000: 192 interrupts forwarded to /interrupt-controller@50041000
+[    0.000000] rcu: srcu_init: Setting srcu_struct sizes based on contention.
+[    0.000000] tegra-clk-debug:pll_a_out0_out_adsp: connection ID is greater than 16
+[    0.000000] tegra-clk-debug:dmic1_sync_clk_mux: connection ID is greater than 16
+[    0.000000] tegra-clk-debug:dmic2_sync_clk_mux: connection ID is greater than 16
+[    0.000000] tegra-clk-debug:dmic3_sync_clk_mux: connection ID is greater than 16
+[    0.000001] sched_clock: 32 bits at 1000kHz, resolution 1000ns, wraps every 2147483647500ns
+[    0.000014] clocksource: timer_us: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 1911260446275 ns
+[    0.000343] clocksource: tegra_suspend_timer: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 1911260446275000 ns
+[    0.001714] arch_timer: cp15 timer running at 19.20MHz (phys).
+[    0.001726] clocksource: arch_sys_counter: mask: 0xffffffffffffff max_cycles: 0x46d987e47, max_idle_ns: 440795202767 ns
+[    0.001734] sched_clock: 56 bits at 19MHz, resolution 52ns, wraps every 4398046511078ns
+[    0.002452] Console: colour dummy device 80x25
+[    0.003184] Calibrating delay loop (skipped), value calculated using timer frequency.. 38.40 BogoMIPS (lpj=76800)
+[    0.003198] pid_max: default: 32768 minimum: 301
+[    0.005251] LSM: initializing lsm=capability,yama,apparmor,ima,evm
+[    0.006731] Yama: becoming mindful.
+[    0.007156] AppArmor: AppArmor initialized
+[    0.008425] Mount-cache hash table entries: 8192 (order: 4, 65536 bytes, linear)
+[    0.008462] Mountpoint-cache hash table entries: 8192 (order: 4, 65536 bytes, linear)
+[    0.017329] rcu: Hierarchical SRCU implementation.
+[    0.017343] rcu: 	Max phase no-delay instances is 1000.
+[    0.017681] Timer migration: 1 hierarchy levels; 8 children per group; 1 crossnode level
+[    0.020549] Speedo Revision 4
+[    0.020574] Tegra Revision: A02 SKU: 143 CPU Process: 0 SoC Process: 1
+[    0.020891] tegra-pmc: access to PMC is restricted to TZ
+[    0.021699] EFI runtime services will be disabled.
+[    0.022359] smp: Bringing up secondary CPUs ...
+[    0.023366] Detected PIPT I-cache on CPU1
+[    0.023684] CPU1: Booted secondary processor 0x0000000001 [0x411fd071]
+[    0.024963] Detected PIPT I-cache on CPU2
+[    0.025167] CPU2: Booted secondary processor 0x0000000002 [0x411fd071]
+[    0.026176] Detected PIPT I-cache on CPU3
+[    0.026364] CPU3: Booted secondary processor 0x0000000003 [0x411fd071]
+[    0.026485] smp: Brought up 1 node, 4 CPUs
+[    0.026495] SMP: Total of 4 processors activated.
+[    0.026498] CPU: All CPU(s) started at EL2
+[    0.026533] CPU features: detected: 32-bit EL0 Support
+[    0.026537] CPU features: detected: 32-bit EL1 Support
+[    0.026543] CPU features: detected: CRC32 instructions
+[    0.026556] CPU features: detected: PMUv3
+[    0.026615] alternatives: applying system-wide alternatives
+[    0.031270] CPU features: emulated: Privileged Access Never (PAN) using TTBR0_EL1 switching
+[    0.031761] Memory: 3692116K/4161788K available (18688K kernel code, 4118K rwdata, 14604K rodata, 11136K init, 935K bss, 431136K reserved, 32768K cma-reserved)
+[    0.033748] devtmpfs: initialized
+[    0.050284] clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 7645041785100000 ns
+[    0.050357] posixtimers hash table entries: 2048 (order: 3, 32768 bytes, linear)
+[    0.050494] futex hash table entries: 1024 (65536 bytes on 1 NUMA nodes, total 64 KiB, linear).
+[    0.051305] 20336 pages in range for non-PLT usage
+[    0.051317] 511856 pages in range for PLT usage
+[    0.052512] pinctrl core: initialized pinctrl subsystem
+[    0.053644] SMBIOS 3.0 present.
+[    0.053665] DMI: nvidia p3450-0000/p3450-0000, BIOS 2020.04-g4335beb692 06/11/2024
+[    0.053677] DMI: Memory slots populated: 0/0
+[    0.058496] NET: Registered PF_NETLINK/PF_ROUTE protocol family
+[    0.060543] DMA: preallocated 512 KiB GFP_KERNEL pool for atomic allocations
+[    0.060857] DMA: preallocated 512 KiB GFP_KERNEL|GFP_DMA pool for atomic allocations
+[    0.061401] DMA: preallocated 512 KiB GFP_KERNEL|GFP_DMA32 pool for atomic allocations
+[    0.061481] audit: initializing netlink subsys (disabled)
+[    0.061769] audit: type=2000 audit(0.060:1): state=initialized audit_enabled=0 res=1
+[    0.064804] thermal_sys: Registered thermal governor 'fair_share'
+[    0.064815] thermal_sys: Registered thermal governor 'bang_bang'
+[    0.064820] thermal_sys: Registered thermal governor 'step_wise'
+[    0.064824] thermal_sys: Registered thermal governor 'user_space'
+[    0.064828] thermal_sys: Registered thermal governor 'power_allocator'
+[    0.064929] cpuidle: using governor ladder
+[    0.064956] cpuidle: using governor menu
+[    0.065243] hw-breakpoint: found 6 breakpoint and 4 watchpoint registers.
+[    0.065369] ASID allocator initialised with 65536 entries
+[    0.067121] Serial: AMBA PL011 UART driver
+[    0.085758] HugeTLB: registered 1.00 GiB page size, pre-allocated 0 pages
+[    0.085774] HugeTLB: 0 KiB vmemmap can be freed for a 1.00 GiB page
+[    0.085781] HugeTLB: registered 32.0 MiB page size, pre-allocated 0 pages
+[    0.085785] HugeTLB: 0 KiB vmemmap can be freed for a 32.0 MiB page
+[    0.085789] HugeTLB: registered 2.00 MiB page size, pre-allocated 0 pages
+[    0.085792] HugeTLB: 0 KiB vmemmap can be freed for a 2.00 MiB page
+[    0.085797] HugeTLB: registered 64.0 KiB page size, pre-allocated 0 pages
+[    0.085799] HugeTLB: 0 KiB vmemmap can be freed for a 64.0 KiB page
+[    0.095807] ACPI: Interpreter disabled.
+[    0.098175] iommu: Default domain type: Translated
+[    0.098185] iommu: DMA domain TLB invalidation policy: strict mode
+[    0.099806] SCSI subsystem initialized
+[    0.100040] libata version 3.00 loaded.
+[    0.100315] usbcore: registered new interface driver usbfs
+[    0.100370] usbcore: registered new interface driver hub
+[    0.100407] usbcore: registered new device driver usb
+[    0.100738] pps_core: LinuxPPS API ver. 1 registered
+[    0.100743] pps_core: Software ver. 5.3.6 - Copyright 2005-2007 Rodolfo Giometti <giometti@linux.it>
+[    0.100756] PTP clock support registered
+[    0.101136] EDAC MC: Ver: 3.0.0
+[    0.101605] scmi_core: SCMI protocol bus registered
+[    0.103479] NetLabel: Initializing
+[    0.103488] NetLabel:  domain hash size = 128
+[    0.103491] NetLabel:  protocols = UNLABELED CIPSOv4 CALIPSO
+[    0.103560] NetLabel:  unlabeled traffic allowed by default
+[    0.104356] vgaarb: loaded
+[    0.104997] clocksource: Switched to clocksource arch_sys_counter
+[    0.107570] VFS: Disk quotas dquot_6.6.0
+[    0.107714] VFS: Dquot-cache hash table entries: 512 (order 0, 4096 bytes)
+[    0.109444] AppArmor: AppArmor Filesystem Enabled
+[    0.109599] pnp: PnP ACPI: disabled
+[    0.119454] NET: Registered PF_INET protocol family
+[    0.119904] IP idents hash table entries: 65536 (order: 7, 524288 bytes, linear)
+[    0.184533] tcp_listen_portaddr_hash hash table entries: 2048 (order: 3, 32768 bytes, linear)
+[    0.184700] Table-perturb hash table entries: 65536 (order: 6, 262144 bytes, linear)
+[    0.185347] TCP established hash table entries: 32768 (order: 6, 262144 bytes, linear)
+[    0.185948] TCP bind hash table entries: 32768 (order: 8, 1048576 bytes, linear)
+[    0.186774] TCP: Hash tables configured (established 32768 bind 32768)
+[    0.187333] MPTCP token hash table entries: 4096 (order: 5, 98304 bytes, linear)
+[    0.187653] UDP hash table entries: 2048 (order: 5, 131072 bytes, linear)
+[    0.187891] UDP-Lite hash table entries: 2048 (order: 5, 131072 bytes, linear)
+[    0.188470] NET: Registered PF_UNIX/PF_LOCAL protocol family
+[    0.188516] NET: Registered PF_XDP protocol family
+[    0.188552] PCI: CLS 0 bytes, default 64
+[    0.189088] Trying to unpack rootfs image as initramfs...
+[    0.199209] kvm [1]: nv: 568 coarse grained trap handlers
+[    0.199907] kvm [1]: Guests without required CPU erratum workarounds can deadlock system!
+[    0.199907] Only trusted guests should be used on this system.
+[    0.199917] kvm [1]: IPA Size Limit: 44 bits
+[    0.202639] kvm [1]: vgic interrupt IRQ9
+[    0.202750] kvm [1]: Hyp nVHE mode initialized successfully
+[    0.205894] Initialise system trusted keyrings
+[    0.205976] Key type blacklist registered
+[    0.206398] workingset: timestamp_bits=40 max_order=20 bucket_order=0
+[    0.213976] squashfs: version 4.0 (2009/01/31) Phillip Lougher
+[    0.216570] fuse: init (API version 7.45)
+[    0.217515] integrity: Platform Keyring initialized
+[    0.261731] Key type asymmetric registered
+[    0.261753] Asymmetric key parser 'x509' registered
+[    0.262105] Block layer SCSI generic (bsg) driver version 0.4 loaded (major 241)
+[    0.262519] io scheduler mq-deadline registered
+[    0.270721] ledtrig-cpu: registered to indicate activity on CPUs
+[    0.297124] tegra-apbdma 60020000.dma: Tegra20 APB DMA driver registered 32 channels
+[    0.300671] tegra-pmc 7000e400.pmc: i2c-thermtrip node not found, emergency thermal reset disabled.
+[    0.305600] Serial: 8250/16550 driver, 32 ports, IRQ sharing enabled
+[    0.319230] printk: legacy console [ttyS0] disabled
+[    0.319682] 70006000.serial: ttyS0 at MMIO 0x70006000 (irq = 58, base_baud = 25500000) is a Tegra
+[    0.319750] printk: legacy console [ttyS0] enabled
+[    1.643780] msm_serial: driver initialized
+[    1.657279] loop: module loaded
+[    1.660841] tun: Universal TUN/TAP device driver, 1.6
+[    1.664317] PPP generic driver version 2.4.2
+[    1.669207] hv_vmbus: registering driver hyperv_keyboard
+[    1.673529] mousedev: PS/2 mouse device common for all mice
+[    1.679861] i2c_dev: i2c /dev entries driver
+[    1.684468] device-mapper: core: CONFIG_IMA_DISABLE_HTABLE is disabled. Duplicate IMA measurements will not be recorded in the IMA log.
+[    1.695239] device-mapper: uevent: version 1.0.3
+[    1.700099] device-mapper: ioctl: 4.50.0-ioctl (2025-04-28) initialised: dm-devel@lists.linux.dev
+[    1.711711] cpufreq: cpufreq_policy_online: CPU0: Running at unlisted initial frequency: 1017600 kHz, changing to: 1020000 kHz
+[    1.724943] hw perfevents: enabled with armv8_cortex_a57 PMU driver, 7 (0,8000003f) counters available
+[    1.735024] drop_monitor: Initializing network drop monitor service
+[    1.739756] NET: Registered PF_INET6 protocol family
+[    1.746126] Segment Routing with IPv6
+[    1.747543] In-situ OAM (IOAM) with IPv6
+[    1.751558] NET: Registered PF_PACKET protocol family
+[    1.756555] bridge: filtering via arp/ip/ip6tables is no longer available by default. Update your scripts to load br_netfilter if you need this.
+[    1.770252] Key type dns_resolver registered
+[    1.780859] registered taskstats version 1
+[    1.784325] Loading compiled-in X.509 certificates
+[    1.798973] Demotion targets for Node 0: null
+[    1.802443] Key type .fscrypt registered
+[    1.804869] Key type fscrypt-provisioning registered
+[    5.830091] Freeing initrd memory: 229448K
+[    5.932790] Key type encrypted registered
+[    5.934491] AppArmor: AppArmor sha256 policy hashing enabled
+[    5.940232] ima: No TPM chip found, activating TPM-bypass!
+[    5.945618] ima: Allocated hash algorithm: sha1
+[    5.950098] ima: No architecture policies found
+[    5.954667] evm: Initialising EVM extended attributes:
+[    5.959666] evm: security.selinux
+[    5.962956] evm: security.SMACK64
+[    5.966258] evm: security.SMACK64EXEC
+[    5.969889] evm: security.SMACK64TRANSMUTE
+[    5.973962] evm: security.SMACK64MMAP
+[    5.977602] evm: security.apparmor
+[    5.980976] evm: security.ima
+[    5.983924] evm: security.capability
+[    5.987484] evm: HMAC attrs: 0x1
+[    6.009022] gpio gpiochip0: Static allocation of GPIO base is deprecated, use dynamic allocation.
+[    6.017324] tegra-pcie 1003000.pcie: host bridge /pcie@1003000 ranges:
+[    6.022078] tegra-pcie 1003000.pcie:      MEM 0x0001000000..0x0001001fff -> 0x0001000000
+[    6.030111] tegra-pcie 1003000.pcie:       IO 0x0012000000..0x001200ffff -> 0x0000000000
+[    6.038175] tegra-pcie 1003000.pcie:      MEM 0x0013000000..0x001fffffff -> 0x0013000000
+[    6.046238] tegra-pcie 1003000.pcie:      MEM 0x0020000000..0x003fffffff -> 0x0020000000
+[    6.054445] tegra-pcie 1003000.pcie: 4x1, 1x1 configuration
+[    6.062138] tegra-pcie 1003000.pcie: host bridge /pcie@1003000 ranges:
+[    6.066356] tegra-pcie 1003000.pcie:      MEM 0x0001000000..0x0001001fff -> 0x0001000000
+[    6.074417] tegra-pcie 1003000.pcie:       IO 0x0012000000..0x001200ffff -> 0x0000000000
+[    6.082480] tegra-pcie 1003000.pcie:      MEM 0x0013000000..0x001fffffff -> 0x0013000000
+[    6.090535] tegra-pcie 1003000.pcie:      MEM 0x0020000000..0x003fffffff -> 0x0020000000
+[    6.098680] tegra-pcie 1003000.pcie: 4x1, 1x1 configuration
+[    6.184852] clk: Disabling unused clocks
+[    6.187074] PM: genpd: Disabling u[    6.205953] Freeing unused kernel memory: 11136K
+[    6.237986] Checked W+X mappings: passed, no W+X pages found
+[    6.241472] Run /init as init process
+[    6.245027]   with arguments:
+[    6.247964]     /init
+[    6.250241]   with environment:
+[    6.253344]     HOME=/
+[    6.255676]     TERM=linux
+Loading, please wait...
+Starting systemd-udevd version 252.39-1~deb12u1
+
+
+[    6.960406] tegra-host1x 50000000.host1x: deferred probe timeout, ignoring dependency
+[    6.967454] tegra-host1x 50000000.host1x: failed to get reset: -517
+[    6.982193] tegra-pcie 1003000.pcie: host bridge /pcie@1003000 ranges:
+[    6.987728] tegra-pcie 1003000.pcie:      MEM 0x0001000000..0x0001001fff -> 0x0001000000
+[    7.001136] tegra-pcie 1003000.pcie:       IO 0x0012000000..0x001200ffff -> 0x0000000000
+[    7.007108] tegra-pcie 1003000.pcie:      MEM 0x0013000000..0x001fffffff -> 0x0013000000
+[    7.015223] tegra-pcie 1003000.pcie:      MEM 0x0020000000..0x003fffffff -> 0x0020000000
+[    7.023528] tegra-pcie 1003000.pcie: 4x1, 1x1 configuration
+[    7.031993] tegra-host1x 50000000.host1x: deferred probe timeout, ignoring dependency
+[    7.038262] tegra_rtc 7000e000.rtc: registered as rtc1
+[    7.039352] tegra-host1x 50000000.host1x: failed to get reset: -517
+[    7.049043] tegra_rtc 7000e000.rtc: Tegra internal Real Time Clock
+[    7.050600] irq: IRQ68: trimming hierarchy from :pmc@7000e400
+[    7.055768] tegra-pcie 1003000.pcie: host bridge /pcie@1003000 ranges:
+[    7.067382] tegra-pcie 1003000.pcie:      MEM 0x0001000000..0x0001001fff -> 0x0001000000
+[    7.075496] tegra-pcie 1003000.pcie:       IO 0x0012000000..0x001200ffff -> 0x0000000000
+[    7.076962] max77620 1-003c: PMIC Version OTP:0x35 and ES:0x8
+[    7.083519] tegra-pcie 1003000.pcie:      MEM 0x0013000000..0x001fffffff -> 0x0013000000
+[    7.097243] tegra-pcie 1003000.pcie:      MEM 0x0020000000..0x003fffffff -> 0x0020000000
+[    7.105547] tegra-pcie 1003000.pcie: 4x1, 1x1 configuration
+[    7.114490] tegra-host1x 50000000.host1x: deferred probe timeout, ignoring dependency
+[    7.120403] tegra-host1x 50000000.host1x: failed to get reset: -517
+[    7.132451] tegra-pcie 1003000.pcie: host bridge /pcie@1003000 ranges:
+[    7.134557] sdhci: Secure Digital Host Controller Interface driver
+[    7.134687] irq: IRQ77: trimming hierarchy from :pmc@7000e400
+[    7.134952] input: gpio-keys as /devices/platform/gpio-keys/input/input0
+[    7.136840] tegra-pcie 1003000.pcie:      MEM 0x0001000000..0x0001001fff -> 0x0001000000
+[    7.142909] sdhci: Copyright(c) Pierre Ossman
+[    7.148649] tegra-pcie 1003000.pcie:       IO 0x0012000000..0x001200ffff -> 0x0000000000
+[    7.155905] gic 702f9000.interrupt-controller: GIC IRQ controller registered
+[    7.163356] tegra-pcie 1003000.pcie:      MEM 0x0013000000..0x001fffffff -> 0x0013000000
+[    7.164207] sdhci-pltfm: SDHCI platform and OF driver helper
+[    7.169854] tegra-aconnect aconnect@702c0000: Tegra ACONNECT bus registered
+[    7.170047] sdhci-tegra 700b0000.mmc: Got CD GPIO
+[    7.175748] tegra-pcie 1003000.pcie:      MEM 0x0020000000..0x003fffffff -> 0x0020000000
+[    7.216339] tegra-pcie 1003000.pcie: 4x1, 1x1 configuration
+[    7.225272] tegra-host1x 50000000.host1x: deferred probe timeout, ignoring dependency
+[    7.231083] tegra-host1x 50000000.host1x: failed to get reset: -517
+[    7.252731] tegra-pcie 1003000.pcie: host bridge /pcie@1003000 ranges:
+[    7.254413] sdhci-tegra 700b0000.mmc: Got CD GPIO
+[    7.257115] tegra-pcie 1003000.pcie:      MEM 0x0001000000..0x0001001fff -> 0x0001000000
+[    7.270044] tegra-pcie 1003000.pcie:       IO 0x0012000000..0x001200ffff -> 0x0000000000
+[    7.277970] tegra-pcie 1003000.pcie:      MEM 0x0013000000..0x001fffffff -> 0x0013000000
+[    7.286065] tegra-pcie 1003000.pcie:      MEM 0x0020000000..0x003fffffff -> 0x0020000000
+[    7.294361] tegra-pcie 1003000.pcie: 4x1, 1x1 configuration
+[    7.316870] nouveau 57000000.gpu: deferred probe timeout, ignoring dependency
+[    7.360627] tegra-host1x 50000000.host1x: deferred probe timeout, ignoring dependency
+[    7.366452] tegra-host1x 50000000.host1x: failed to get reset: -517
+[    7.376611] VDD_DDR_1V1_PMIC: Bringing 1125000uV into 1150000-1150000uV
+[    7.381567] tegra-pcie 1003000.pcie: host bridge /pcie@1003000 ranges:
+[    7.383901] sdhci-tegra 700b0000.mmc: Got CD GPIO
+[    7.387552] tegra-pcie 1003000.pcie:      MEM 0x0001000000..0x0001001fff -> 0x0001000000
+[    7.400236] tegra-pcie 1003000.pcie:       IO 0x0012000000..0x001200ffff -> 0x0000000000
+[    7.408336] tegra-pcie 1003000.pcie:      MEM 0x0013000000..0x001fffffff -> 0x0013000000
+[    7.416429] tegra-pcie 1003000.pcie:      MEM 0x0020000000..0x003fffffff -> 0x0020000000
+[    7.424595] tegra-pcie 1003000.pcie: 4x1, 1x1 configuration
+[    7.430661] tegra-pcie 1003000.pcie: failed to get PHY#0: -517
+[    7.435762] tegra-pcie 1003000.pcie: failed to get PHYs: -517
+[    7.441460] tegra-pcie 1003000.pcie: failed to request resources: -517
+[    7.451491] nouveau 57000000.gpu: deferred probe timeout, ignoring dependency
+[    7.457303] tegra-host1x 50000000.host1x: deferred probe timeout, ignoring dependency
+[    7.461330] irq: IRQ81: trimming hierarchy from :pmc@7000e400
+[    7.469940] tegra-host1x 50000000.host1x: failed to get reset: -517
+[    7.470529] mmc1: SDHCI controller on 700b0000.mmc [700b0000.mmc] using ADMA 64-bit
+[    7.481372]  usb2-1: supply vbus not found, using dummy regulator
+[    7.490446]  usb2-2: supply vbus not found, using dummy regulator
+[    7.501760] irq: IRQ83: trimming hierarchy from :pmc@7000e400
+[    7.502697] max77686-rtc max77620-rtc: registered as rtc0
+[    7.505687] gpio-vbus 7009f000.padctl:ports:usb2-0:connector: supply vbus_draw not found, using dummy regulator
+[    7.523696] tegra-xusb 70090000.usb: Firmware timestamp: 2023-04-25 07:35:59 UTC
+[    7.528872] tegra-xusb 70090000.usb: xHCI Host Controller
+[    7.534271] tegra-xusb 70090000.usb: new USB bus registered, assigned bus number 1
+[    7.541859] max77686-rtc max77620-rtc: setting system clock to 2000-01-01T01:00:28 UTC (946688428)
+[    7.542564] tegra-xusb 70090000.usb: hcc params 0x0184f525 hci version 0x100 quirks 0x0000000000000010
+[    7.561569] tegra-xusb 70090000.usb: irq 70, io mem 0x70090000
+[    7.566216] tegra-xusb 70090000.usb: xHCI Host Controller
+[    7.571178] tegra-xusb 70090000.usb: new USB bus registered, assigned bus number 2
+Begin: L[    7.578761] tegra-xusb 70090000.usb: Host supports USB 3.0 SuperSpeed
+oading e[    7.586105] usb usb1: New USB device found, idVendor=1d6b, idProduct=0002, bcdDevice= 6.18
+ssential[    7.594764] usb usb1: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+ drivers[    7.602679] usb usb1: Product: xHCI Host Controller
+ ... don[    7.608168] usb usb1: Manufacturer: Linux 6.18.28-current-arm64 xhci-hcd
+e.
+Begin: Runni[    7.615537] usb usb1: SerialNumber: 70090000.usb
+ng /scri[    7.617461] hub 1-0:1.0: USB hub found
+pts/init[    7.626083] hub 1-0:1.0: 5 ports detected
+-premount ... [[    7.631432] usb usb2: We don't know the algorithms for LPM for this host, disabling LPM.
+2J[3J[[    7.640349] usb usb2: New USB device found, idVendor=1d6b, idProduct=0003, bcdDevice= 6.18
+-1;-1fdo[    7.649042] usb usb2: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+ne.
+
+
+Be[    7.656954] usb usb2: Product: xHCI Host Controller
+gin: Mou[    7.662425] usb usb2: Manufacturer: Linux 6.18.28-current-arm64 xhci-hcd
+nting ro[    7.669742] usb usb2: SerialNumber: 70090000.usb
+ot file system ... Begin[    7.676694] hub 2-0:1.0: USB hub found
+: Runnin[    7.680950] hub 2-0:1.0: 4 ports detected
+g /scripts/local-top ... done.
+
+
+Begin: Running /scripts/local-premount ... [    7.692394] tegra-pcie 1003000.pcie: host bridge /pcie@1003000 ranges:
+[    7.698686] tegra-pcie 1003000.pcie:      MEM 0x0001000000..0x0001001fff -> 0x0001000000
+[    7.706717] tegra-pcie 1003000.pcie:       IO 0x0012000000..0x001200ffff -> 0x0000000000
+[    7.714739] tegra-pcie 1003000.pcie:      MEM 0x0013000000..0x001fffffff -> 0x0013000000
+[    7.722785] tegra-pcie 1003000.pcie:      MEM 0x0020000000..0x003fffffff -> 0x0020000000
+[    7.731005] tegra-pcie 1003000.pcie: 4x1, 1x1 configuration
+[    7.736989] raid6: neonx8   gen()  4504 MB/s
+[    7.805121] raid6: neonx4   gen()  4434 MB/s
+[    7.873125] raid6: neonx2   gen()  3644 MB/s
+[    7.881150] usb 1-2: new high-speed USB device number 2 using tegra-xusb
+[    7.941124] raid6: neonx1   gen()  2670 MB/s
+[    8.009124] raid6: int64x8  gen()  2598 MB/s
+[    8.038366] usb 1-2: New USB device found, idVendor=0bda, idProduct=5411, bcdDevice= 1.20
+[    8.044249] usb 1-2: New USB device strings: Mfr=1, Product=2, SerialNumber=0
+[    8.051350] usb 1-2: Product: 4-Port USB 2.1 Hub
+[    8.055945] usb 1-2: Manufacturer: Generic
+[    8.063480] hub 1-2:1.0: USB hub found
+[    8.066111] hub 1-2:1.0: 4 ports detected
+[    8.076998] raid6: int64x4  gen()  2471 MB/s
+[    8.145121] raid6: int64x2  gen()  2360 MB/s
+[    8.147268] usb 2-1: new SuperSpeed USB device number 2 using tegra-xusb
+[    8.185511] usb 2-1: New USB device found, idVendor=0bda, idProduct=0411, bcdDevice= 1.20
+[    8.191394] usb 2-1: New USB device strings: Mfr=1, Product=2, SerialNumber=0
+[    8.198497] usb 2-1: Product: 4-Port USB 3.1 Hub
+[    8.203092] usb 2-1: Manufacturer: Generic
+[    8.213637] hub 2-1:1.0: USB hub found
+[    8.216988] raid6: int64x1  gen()  1799 MB/s
+[    8.219365] raid6: using algorithm neonx8 gen() 4504 MB/s
+[    8.219508] hub 2-1:1.0: 4 ports detected
+[    8.289125] raid6: .... xor() 3089 MB/s, rmw enabled
+[    8.291800] raid6: using neon recovery algorithm
+[    8.297028] usb 1-3: new full-speed USB device number 3 using tegra-xusb
+[    8.303852] tegra-pcie 1003000.pcie: probing port 0, using 4 lanes
+[    8.311564] tegra-pcie 1003000.pcie: probing port 1, using 1 lanes
+[    8.345228] mmc0: SDHCI controller on 700b0400.mmc [700b0400.mmc] using ADMA 64-bit
+[    8.355856] xor: measuring software checksum speed
+[    8.358869]    8regs           :  7008 MB/sec
+[    8.363152]    32regs          :  8255 MB/sec
+[    8.367555]    arm64_neon      :  6286 MB/sec
+[    8.371369] xor: using function: 32regs (8255 MB/sec)
+[    8.389176] tegra-pcie 1003000.pcie: PCI host bridge to bus 0000:00
+[    8.393300] pci_bus 0000:00: root bus resource [bus 00-ff]
+[    8.398673] pci_bus 0000:00: root bus resource [mem 0x01000000-0x01001fff]
+[    8.405540] pci_bus 0000:00: root bus resource [io  0x0000-0xffff]
+[    8.411677] pci_bus 0000:00: root bus resource [mem 0x13000000-0x1fffffff]
+[    8.418486] pci_bus 0000:00: root bus resource [mem 0x20000000-0x3fffffff pref]
+[    8.426957] pci 0000:00:01.0: [10de:0fae] type 01 class 0x060400 PCIe Root Port
+[    8.433095] pci_bus 0000:00: 2-byte config write to 0000:00:01.0 offset 0x4 may corrupt adjacent RW1C bits
+[    8.442709] pci 0000:00:01.0: PCI bridge to [bus 00]
+[    8.447631] pci 0000:00:01.0:   bridge window [io  0x0000-0x0fff]
+[    8.453706] pci 0000:00:01.0: enabling Extended Tags
+[    8.458741] pci 0000:00:01.0: PME# supported from D0 D1 D2 D3hot D3cold
+[    8.466015] pci 0000:00:02.0: [10de:0faf] type 01 class 0x060400 PCIe Root Port
+[    8.472634] pci 0000:00:02.0: PCI bridge to [bus 00]
+[    8.474543] Btrfs loaded, zoned=yes, fsverity=yes
+[    8.477528] pci 0000:00:02.0:   bridge window [io  0x0000-0x0fff]
+[    8.477555] pci 0000:00:02.0: enabling Extended Tags
+Scanning[    8.493321] pci 0000:00:02.0: PME# supported from D0 D1 D2 D3hot D3cold
+ for Btrfs filesystems
+
+
+[    8.504514] usb 1-3: New USB device found, idVendor=0cf3, idProduct=e007, bcdDevice= 0.01
+[    8.506998] pci 0000:00:01.0: bridge configuration invalid ([bus 00-00]), reconfiguring
+done.
+[    8.510771] usb 1-3: New USB device strings: Mfr=0, Product=0, SerialNumber=0
+
+[    8.518745] pci 0000:00:02.0: bridge configuration invalid ([bus 00-00]), reconfiguring
+[    8.534919] pci 0000:01:00.0: [168c:003e] type 00 class 0x028000 PCIe Endpoint
+[    8.541800] pci 0000:01:00.0: BAR 0 [mem 0x00000000-0x001fffff 64bit]
+[    8.548437] pci 0000:01:00.0: PME# supported from D0 D3hot D3cold
+Begin: Waiting for root file system ... [    8.565105] pci 0000:01:00.0: ASPM: default states L0s
+[    8.568084] pci_bus 0000:01: busn_res: [bus 01-ff] end is updated to 01
+[    8.575031] pci 0000:02:00.0: [10ec:8168] type 00 class 0x020000 PCIe Endpoint
+[    8.581839] pci 0000:02:00.0: BAR 0 [io  0x0000-0x00ff]
+[    8.586962] pci 0000:02:00.0: BAR 2 [mem 0x00000000-0x00000fff 64bit]
+[    8.593370] pci 0000:02:00.0: BAR 4 [mem 0x00000000-0x00003fff 64bit]
+[    8.600005] pci 0000:02:00.0: supports D1 D2
+[    8.604052] pci 0000:02:00.0: PME# supported from D0 D1 D2 D3hot D3cold
+[    8.611737] usb 2-1.4: new SuperSpeed USB device number 3 using tegra-xusb
+[    8.617110] pci 0000:02:00.0: ASPM: default states L0s
+[    8.622833] pci_bus 0000:02: busn_res: [bus 02-ff] end is updated to 02
+[    8.629260] pci 0000:00:01.0: bridge window [mem 0x13000000-0x131fffff]: assigned
+[    8.636722] pci 0000:00:02.0: bridge window [mem 0x13200000-0x132fffff]: assigned
+[    8.644215] pci 0000:00:02.0: bridge window [io  0x1000-0x1fff]: assigned
+[    8.650946] pci 0000:01:00.0: BAR 0 [mem 0x13000000-0x131fffff 64bit]: assigned
+[    8.658182] pci 0000:00:01.0: PCI bridge to [bus 01]
+[    8.663097] pci 0000:00:01.0:   bridge window [mem 0x13000000-0x131fffff]
+[    8.669878] pci 0000:02:00.0: BAR 4 [mem 0x13200000-0x13203fff 64bit]: assigned
+[    8.677142] pci 0000:02:00.0: BAR 2 [mem 0x13204000-0x13204fff 64bit]: assigned
+[    8.684417] pci 0000:02:00.0: BAR 0 [io  0x1000-0x10ff]: assigned
+[    8.690477] pci 0000:00:02.0: PCI bridge to [bus 02]
+[    8.695401] pci 0000:00:02.0:   bridge window [io  0x1000-0x1fff]
+[    8.701472] pci 0000:00:02.0:   bridge window [mem 0x13200000-0x132fffff]
+[    8.708233] pci_bus 0000:00: resource 4 [mem 0x01000000-0x01001fff]
+[    8.708366] usb 2-1.4: New USB device found, idVendor=0781, idProduct=5591, bcdDevice= 1.00
+[    8.714443] pci_bus 0000:00: resource 5 [io  0x0000-0xffff]
+[    8.714449] pci_bus 0000:00: resource 6 [mem 0x13000000-0x1fffffff]
+[    8.722760] usb 2-1.4: New USB device strings: Mfr=1, Product=2, SerialNumber=3
+[    8.722765] usb 2-1.4: Product:  SanDisk 3.2Gen1
+[    8.728307] pci_bus 0000:00: resource 7 [mem 0x20000000-0x3fffffff pref]
+[    8.734546] usb 2-1.4: Manufacturer:  USB
+[    8.734550] usb 2-1.4: SerialNumber: 010108eae7f10813c7dfd3923e8af962ccfc05fb3cba39c07454b03e1575f717895400000000000000000000826b9174009a730091558107c7ab06ec
+[    8.741837] pci_bus 0000:01: resource 1 [mem 0x13000000-0x131fffff]
+[    8.777391] pci_bus 0000:02: resource 0 [io  0x1000-0x1fff]
+[    8.782930] pci_bus 0000:02: resource 1 [mem 0x13200000-0x132fffff]
+[    8.789356] pci 0000:00:01.0: nv_msi_ht_cap_quirk didn't locate host bridge
+[    8.796711] pcieport 0000:00:01.0: enabling device (0000 -> 0002)
+[    8.802486] pcieport 0000:00:01.0: PME: Signaling with IRQ 85
+[    8.803546] usb-storage 2-1.4:1.0: USB Mass Storage device detected
+[    8.808396] pcieport 0000:00:01.0: AER: enabled with IRQ 85
+[    8.815723] scsi host0: usb-storage 2-1.4:1.0
+[    8.820059] pci 0000:00:02.0: nv_msi_ht_cap_quirk didn't locate host bridge
+[    8.824653] usbcore: registered new interface driver usb-storage
+[    8.830926] pci 0000:00:02.0: nv_msi_ht_cap_quirk_leaf+0x0/0x48 took 10637 usecs
+[    8.844847] pcieport 0000:00:02.0: enabling device (0000 -> 0003)
+[    8.845926] usbcore: registered new interface driver uas
+[    8.850568] pcieport 0000:00:02.0: PME: Signaling with IRQ 85
+[    8.862777] pcieport 0000:00:02.0: AER: enabled with IRQ 85
+[    8.865004] mmc0: Failed to initialize a non-removable card
+[    8.868131] r8169 0000:02:00.0: enabling device (0000 -> 0003)
+[    8.909275] r8169 0000:02:00.0 eth0: RTL8168h/8111h, 00:04:4b:e6:d9:e0, XID 541, IRQ 87
+[    8.915058] r8169 0000:02:00.0 eth0: jumbo features [frames: 9194 bytes, tx checksumming: ko]
+[    8.915543] r8169 0000:02:00.0 end0: renamed from eth0
+[    8.926006] nouveau 57000000.gpu: deferred probe timeout, ignoring dependency
+[    8.937201] tegra-host1x 50000000.host1x: deferred probe timeout, ignoring dependency
+[    8.943770] tegra-host1x 50000000.host1x: failed to get reset: -517
+[    8.945887] pcieport 0000:00:01.0: AER: Correctable error message received from 0000:01:00.0
+[    8.958208] pci 0000:01:00.0: PCIe Bus Error: severity=Correctable, type=Data Link Layer, (Receiver ID)
+[    8.967531] pci 0000:01:00.0:   device [168c:003e] error status/mask=00000080/00006000
+[    8.975415] pci 0000:01:00.0:    [ 7] BadDLLP               
+[    9.243674] pcieport 0000:00:01.0: AER: Correctable error message received from 0000:01:00.0
+[    9.250002] pci 0000:01:00.0: PCIe Bus Error: severity=Correctable, type=Physical Layer, (Receiver ID)
+[    9.259226] pci 0000:01:00.0:   device [168c:003e] error status/mask=00000001/00006000
+[    9.267147] pci 0000:01:00.0:    [ 0] RxErr                  (First)
+[    9.273459] pcieport 0000:00:01.0: AER: Correctable error message received from 0000:01:00.0
+[    9.489962] pcieport 0000:00:01.0: AER: Correctable error message received from 0000:01:00.0
+[    9.496107] pci 0000:01:00.0: PCIe Bus Error: severity=Correctable, type=Physical Layer, (Receiver ID)
+[    9.505367] pci 0000:01:00.0:   device [168c:003e] error status/mask=00000001/00006000
+[    9.513252] pci 0000:01:00.0:    [ 0] RxErr                  (First)
+[    9.545568] pcieport 0000:00:01.0: AER: Correctable error message received from 0000:01:00.0
+[    9.551711] pci 0000:01:00.0: PCIe Bus Error: severity=Correctable, type=Physical Layer, (Receiver ID)
+[    9.561020] pci 0000:01:00.0:   device [168c:003e] error status/mask=00000001/00006000
+[    9.568907] pci 0000:01:00.0:    [ 0] RxErr                  (First)
+Begin: Running /scripts/local-block ... done.
+
+
+[    9.859356] scsi 0:0:0:0: Direct-Access      USB      SanDisk 3.2Gen1 1.00 PQ: 0 ANSI: 6
+[    9.867246] sd 0:0:0:0: Attached scsi generic sg0 type 0
+[    9.870125] sd 0:0:0:0: [sda] 60088320 512-byte logical blocks: (30.8 GB/28.7 GiB)
+[    9.879218] sd 0:0:0:0: [sda] Write Protect is off
+[    9.882813] sd 0:0:0:0: [sda] Mode Sense: 43 00 00 00
+[    9.888881] sd 0:0:0:0: [sda] Write cache: disabled, read cache: enabled, doesn't support DPO or FUA
+[    9.971996] GPT:Primary header thinks Alt. header is not at the end of the disk.
+[    9.977164] GPT:10911743 != 60088319
+[    9.980686] GPT:Alternate GPT header not at the end of the disk.
+[    9.986706] GPT:10911743 != 60088319
+[    9.990231] GPT: Use GNU Parted to correct GPT errors.
+[    9.995371]  sda: sda1 sda2
+[    9.999286] sd 0:0:0:0: [sda] Attached SCSI removable disk
+[   10.006132] nouveau 57000000.gpu: deferred probe timeout, ignoring dependency
+[   10.012743] tegra-host1x 50000000.host1x: deferred probe timeout, ignoring dependency
+[   10.019000] tegra-host1x 50000000.host1x: failed to get reset: -517
+Begin: Running /scripts/local-block ... done.
+
+
+done.
+
+
+[   10.628407] pcieport 0000:00:01.0: AER: Correctable error message received from 0000:01:00.0
+[   10.634727] pci 0000:01:00.0: PCIe Bus Error: severity=Correctable, type=Physical Layer, (Receiver ID)
+[   10.643917] pci 0000:01:00.0:   device [168c:003e] error status/mask=00000081/00006000
+[   10.651759] pci 0000:01:00.0:    [ 0] RxErr                  (First)
+[   10.658089] pci 0000:01:00.0:    [ 7] BadDLLP               
+Begin: Will now check root file system ... fsck from util-linux 2.38.1
+
+
+[/sbin/fsck.ext4 (1) -- /dev/sda2] fsck.ext4 -a -C0 /dev/sda2 
+
+
+armbi_root: clean, 56555/324480 files, 1095707/1296128 blocks
+
+
+done.
+
+
+[   10.756549] EXT4-fs (sda2): mounted filesystem 0e31d646-3b63-40d1-8737-69e358cc7a73 ro with writeback data mode. Quota mode: none.
+done.
+
+
+Begin: Running /scripts/local-bottom ... [   10.995338] EXT4-fs (sda2): unmounting filesystem 0e31d646-3b63-40d1-8737-69e358cc7a73.
+[   11.215075] pcieport 0000:00:01.0: AER: Correctable error message received from 0000:01:00.0
+[   11.221367] pci 0000:01:00.0: PCIe Bus Error: severity=Correctable, type=Data Link Layer, (Receiver ID)
+[   11.230655] pci 0000:01:00.0:   device [168c:003e] error status/mask=00000080/00006000
+[   11.238524] pci 0000:01:00.0:    [ 7] BadDLLP               
+[   11.586132] pcieport 0000:00:01.0: AER: Correctable error message received from 0000:01:00.0
+[   11.592485] pci 0000:01:00.0: PCIe Bus Error: severity=Correctable, type=Physical Layer, (Receiver ID)
+[   11.601707] pci 0000:01:00.0:   device [168c:003e] error status/mask=00000001/00006000
+[   11.609602] pci 0000:01:00.0:    [ 0] RxErr                  (First)
+[   11.749799]  sda: sda1 sda2
+[   11.817433]  sda: sda1 sda2
+[   11.860602] pcieport 0000:00:01.0: AER: Correctable error message received from 0000:01:00.0
+[   11.866942] pci 0000:01:00.0: PCIe Bus Error: severity=Correctable, type=Physical Layer, (Receiver ID)
+[   11.876215] pci 0000:01:00.0:   device [168c:003e] error status/mask=00000001/00006000
+[   11.884079] pci 0000:01:00.0:    [ 0] RxErr                  (First)
+[   12.073896] pcieport 0000:00:01.0: AER: Correctable error message received from 0000:01:00.0
+[   12.080162] pci 0000:01:00.0: PCIe Bus Error: severity=Correctable, type=Physical Layer, (Receiver ID)
+[   12.089402] pci 0000:01:00.0:   device [168c:003e] error status/mask=00000001/00006000
+[   12.097286] pci 0000:01:00.0:    [ 0] RxErr                  (First)
+GROWROOT: CHANGED: partition=2 start=540672 old: size=10369024 end=10909695 new: size=59547615 end=60088286
+
+
+[   12.400080] EXT4-fs (sda2): mounted filesystem 0e31d646-3b63-40d1-8737-69e358cc7a73 ro with writeback data mode. Quota mode: none.
+done.
+
+
+Begin: Running /scripts/init-bottom ... done.
+
+
+[   13.193198] systemd[1]: System time before build time, advancing clock.
+[   13.215975] systemd[1]: Inserted module 'autofs4'
+[   13.300367] random: crng init done
+[   13.308176] systemd[1]: systemd 252.39-1~deb12u1 running in system mode (+PAM +AUDIT +SELINUX +APPARMOR +IMA +SMACK +SECCOMP +GCRYPT -GNUTLS +OPENSSL +ACL +BLKID +CURL +ELFUTILS +FIDO2 +IDN2 -IDN +IPTC +KMOD +LIBCRYPTSETUP +LIBFDISK +PCRE2 -PWQUALITY +P11KIT +QRENCODE +TPM2 +BZIP2 +LZ4 +XZ +ZLIB +ZSTD -BPF_FRAMEWORK -XKBCOMMON +UTMP +SYSVINIT default-hierarchy=unified)
+[   13.338562] systemd[1]: Detected architecture arm64.
+
+
+
+Welcome to [1mArmbian-unofficial 24.[   13.347324] systemd[1]: Hostname set to <jetson-nano>.
+11.1 bookworm[0m!
+
+
+
+
+
+[   13.359173] systemd[1]: Initializing machine ID from random generator.
+[   13.363748] systemd[1]: Installed transient /etc/machine-id file.
+[   14.188219] systemd[1]: Queued start job for default target graphical.target.
+[   14.200151] systemd[1]: Created slice system-modprobe.slice - Slice /system/modprobe.
+[[0;32m  OK  [0m] Created slic[   14.207948] systemd[1]: Created slice system-serial\x2dgetty.slice - Slice /system/serial-getty.
+e [0;1;39msystem-modprâ[   14.218765] systemd[1]: Created slice system-systemd\x2dfsck.slice - Slice /system/systemd-fsck.
+Šlice[0m - Slice /syst[   14.229151] systemd[1]: Created slice user.slice - User and Session Slice.
+em/modpr[   14.237410] systemd[1]: Started systemd-ask-password-wall.path - Forward Password Requests to Wall Directory Watch.
+obe.
+
+
+[[0;32m[   14.249070] systemd[1]: Set up automount proc-sys-fs-binfmt_misc.automount - Arbitrary Executable File Formats File System Automount Point.
+  OK  [[   14.262184] systemd[1]: Expecting device dev-disk-by\x2duuid-941C\x2d6C3B.device - /dev/disk/by-uuid/941C-6C3B...
+0m] Crea[   14.272994] systemd[1]: Expecting device dev-ttyS0.device - /dev/ttyS0...
+ted slic[   14.280472] systemd[1]: Reached target integritysetup.target - Local Integrity Protected Volumes.
+e [0;1;[   14.290129] systemd[1]: Reached target slices.target - Slice Units.
+39msyste[   14.296909] systemd[1]: Reached target swap.target - Swaps.
+m-seriaâ[   14.303129] systemd[1]: Reached target time-set.target - System Time Set.
+Š[0m -[   14.310652] systemd[1]: Reached target veritysetup.target - Local Verity Protected Volumes.
+ Slice /[   14.318213] aer_ratelimit: 9 callbacks suppressed
+system/s[   14.318227] pcieport 0000:00:01.0: AER: Correctable error message received from 0000:01:00.0
+erial-ge[   14.333985] pci 0000:01:00.0: PCIe Bus Error: severity=Correctable, type=Data Link Layer, (Receiver ID)
+tty.
+
+
+[   14.333992] pci 0000:01:00.0:   device [168c:003e] error status/mask=00000080/00006000
+[[0;32m[   14.333999] pci 0000:01:00.0:    [ 7] BadDLLP               
+  OK  [0m] Created slice [0;1;39msystem-systeâŠ[0m - Slice /system/systemd-fsck.
+
+
+[[0;32m  OK  [0m] Created slice [0;1;39muser.slice[0m - User and Session Slice.
+
+
+[[0;32m  OK  [0m] Started [0;1;39msystemd-ask-[   14.377880] systemd[1]: Listening on rpcbind.socket - RPCbind Server Activation Socket.
+passwoâŠ Requests to Wa[   14.387731] systemd[1]: Listening on syslog.socket - Syslog Socket.
+ll Directory Wat[   14.395535] systemd[1]: Listening on systemd-fsckd.socket - fsck to fsckd communication Socket.
+ch.
+
+
+[[0;32m [   14.405175] systemd[1]: Listening on systemd-initctl.socket - initctl Compatibility Named Pipe.
+ OK  [0m] Set up automo[   14.416248] systemd[1]: Listening on systemd-journald-audit.socket - Journal Audit Socket.
+unt [0;1;39mpro[   14.425784] systemd[1]: Listening on systemd-journald-dev-log.socket - Journal Socket (/dev/log).
+c-sys-âŠrmats F[   14.436069] systemd[1]: Listening on systemd-journald.socket - Journal Socket.
+ile System Automount Point.
+
+
+         Expecting device[   14.448173] systemd[1]: Listening on systemd-udevd-control.socket - udev Control Socket.
+ [0;1;39mdev-di[   14.457550] systemd[1]: Listening on systemd-udevd-kernel.socket - udev Kernel Socket.
+sk-âŠm - /dev/disk/by-uuid/941C-6C3B...
+
+
+         Exp[   14.470534] systemd[1]: Mounting dev-hugepages.mount - Huge Pages File System...
+ecting device [0;1;39mdev-ttyS0.device[0m - /dev/ttyS0...
+
+
+[[   14.483638] systemd[1]: Mounting dev-mqueue.mount - POSIX Message Queue File System...
+[0;32m  OK  [0m] Reached target [0;1;39mintegrityseâŠLocal I[   14.496892] systemd[1]: Mounting sys-kernel-debug.mount - Kernel Debug File System...
+ntegrity Protected Volumes.
+
+
+[[0;32m  OK  [0m] Reached targe[   14.509977] systemd[1]: Mounting sys-kernel-tracing.mount - Kernel Trace File System...
+t [0;1;39mslice[   14.519375] systemd[1]: auth-rpcgss-module.service - Kernel Module supporting RPCSEC_GSS was skipped because of an unmet condition check (ConditionPathExists=/etc/krb5.keytab).
+s.target[0m - Slice Units.
+
+
+[[0;32m  OK  [0m] Reached target [0;1;39mswap.target[0m - Swaps.
+
+
+[[   14.544205] systemd[1]: Starting fake-hwclock.service - Restore / save the current clock...
+[0;32m  OK  [0m] Reached target [0;1;39mtime-set.target[0m - System [   14.558867] systemd[1]: Starting keyboard-setup.service - Set the console keyboard layout...
+Time Set.
+
+
+[[0;32m  OK  [0m] Reached target [0;1;39mveritysetupâŠ - Local Verity P[   14.574890] systemd[1]: Starting kmod-static-nodes.service - Create List of Static Device Nodes...
+rotected Volumes.
+
+
+[[0;32m  OK  [0m] Listening on [0;1;39mrpcbind.sockeâŠ RPCbind Server A[   14.591689] systemd[1]: Starting modprobe@configfs.service - Load Kernel Module configfs...
+ctivation Socket.
+
+
+[[0;32m  OK  [0m] Listening on [0;1;39msyslog.socket[0m - Syslog Socket[   14.608241] systemd[1]: Starting modprobe@dm_mod.service - Load Kernel Module dm_mod...
+.
+
+
+[[0;32m  OK  [0m] Listening on [0;1;39msystemd-fsckdâŠsck to fsckd communication Socket[   14.624463] systemd[1]: Starting modprobe@drm.service - Load Kernel Module drm...
+.
+
+
+[[0;32m  OK  [0m] Listening on [0;1;39msystemd-initcâŠ initctl Compatibility Named Pipe.
+
+
+[[[   14.641066] systemd[1]: Starting modprobe@efi_pstore.service - Load Kernel Module efi_pstore...
+0;32m  OK  [0m] Listening on [0;1;39msystemd-journâŠsocket[0m - Journal Audit Socket.
+
+
+[[[   14.657897] systemd[1]: Starting modprobe@fuse.service - Load Kernel Module fuse...
+0;32m  OK  [0m] Listening on [0;1;39msystemd-journâŠt[0m - Journal Socket (/dev/log).
+
+
+[[[   14.674247] systemd[1]: Starting modprobe@loop.service - Load Kernel Module loop...
+0;32m  OK  [0m][   14.683469] systemd[1]: systemd-fsck-root.service - File System Check on Root Device was skipped because of an unmet condition check (ConditionPathExists=!/run/initramfs/fsck-root).
+ Listening on [0;1;39msystemd-journald.socket[0m - Journal Socket.
+
+
+[[0;32m  OK  [0m] Listening on [0;1;39msystemd-udevdâŠ.socket[0m - udev Control Socket.
+
+
+[   14.713728] systemd[1]: Starting systemd-modules-load.service - Load Kernel Modules...
+[[0;32m  OK  [0m] Listening on [0;1;39msystemd-udevdâŠl.socket[0m - udev Kernel Soc[   14.729228] systemd[1]: Starting systemd-remount-fs.service - Remount Root and Kernel File Systems...
+ket.
+
+
+         Mounting [0;1;39mdev-hugepages.mount[0m - Huge Pages File System...
+
+
+      [   14.746985] systemd[1]: Starting systemd-udev-trigger.service - Coldplug All udev Devices...
+   Mounting [0;1;39mdev-mqueue.mountâŠPOSIX Message Queue File System...
+
+
+         Mounting [0;1;39msys-kernel-debug.âŠ[0m - Ker[   14.766861] systemd[1]: Mounted dev-hugepages.mount - Huge Pages File System.
+nel Debug File System...
+
+
+         Mou[   14.777419] systemd[1]: Mounted dev-mqueue.mount - POSIX Message Queue File System.
+nting [0;1;39msys-kernel-tracin[   14.788102] systemd[1]: Mounted sys-kernel-debug.mount - Kernel Debug File System.
+âŠ[0m - Kernel Trace File Syst[   14.798097] systemd[1]: Mounted sys-kernel-tracing.mount - Kernel Trace File System.
+em...
+
+
+         Starting [0;1[   14.808977] systemd[1]: Finished fake-hwclock.service - Restore / save the current clock.
+;39mfake-hwclock.servâŠestore / save th[   14.820453] systemd[1]: Finished keyboard-setup.service - Set the console keyboard layout.
+e current clock...
+
+
+         S[   14.831527] systemd[1]: Finished kmod-static-nodes.service - Create List of Static Device Nodes.
+tarting [   14.840376] pcieport 0000:00:01.0: AER: Correctable error message received from 0000:01:00.0
+[0;1;39[   14.850137] pci 0000:01:00.0: PCIe Bus Error: severity=Correctable, type=Physical Layer, (Receiver ID)
+mkeyboar[   14.850151] pci 0000:01:00.0:   device [168c:003e] error status/mask=00000001/00006000
+d-setup.[   14.850159] pci 0000:01:00.0:    [ 0] RxErr                  (First)
+seâŠSet[   14.851393] EXT4-fs (sda2): re-mounted 0e31d646-3b63-40d1-8737-69e358cc7a73 r/w.
+ the con[   14.871052] systemd[1]: modprobe@configfs.service: Deactivated successfully.
+sole keyboard layout...
+
+
+     [   14.893492] systemd[1]: Finished modprobe@configfs.service - Load Kernel Module configfs.
+    Starting [0;1;39mkmod-static-nodesâŠate List of Static Dev[   14.907151] systemd[1]: modprobe@dm_mod.service: Deactivated successfully.
+ice Nodes...
+
+
+        [   14.915781] systemd[1]: Finished modprobe@dm_mod.service - Load Kernel Module dm_mod.
+ Starting [0;1;39mmodprobe@conf[   14.926302] systemd[1]: modprobe@drm.service: Deactivated successfully.
+igfsâŠm - Load [   14.934672] systemd[1]: Finished modprobe@drm.service - Load Kernel Module drm.
+Kernel Module configfs..[   14.944162] systemd[1]: modprobe@efi_pstore.service: Deactivated successfully.
+.
+
+
+         St[   14.952643] systemd[1]: Finished modprobe@efi_pstore.service - Load Kernel Module efi_pstore.
+arting [0;1;39mmodprobe@dm_mod.[   14.963485] systemd[1]: modprobe@fuse.service: Deactivated successfully.
+sâŠ[0m - Load K[   14.972177] systemd[1]: Finished modprobe@fuse.service - Load Kernel Module fuse.
+ernel Module dm_mod...
+
+
+         Start[   14.982896] systemd[1]: modprobe@loop.service: Deactivated successfully.
+ing [0;1;39mmod[   14.991095] systemd[1]: Finished modprobe@loop.service - Load Kernel Module loop.
+probe@drm.service[0m - Load Ker[   15.000889] systemd[1]: Finished systemd-modules-load.service - Load Kernel Modules.
+nel Module drm...
+
+
+         Starting [   15.011966] systemd[1]: Finished systemd-remount-fs.service - Remount Root and Kernel File Systems.
+[0;1;39m[   15.022086] pcieport 0000:00:01.0: AER: Correctable error message received from 0000:01:00.0
+modprobe[   15.031089] pci 0000:01:00.0: PCIe Bus Error: severity=Correctable, type=Physical Layer, (Receiver ID)
+@efi_pst[   15.031101] pci 0000:01:00.0:   device [168c:003e] error status/mask=00000001/00006000
+oâŠ- Lo[   15.031108] pci 0000:01:00.0:    [ 0] RxErr                  (First)
+ad Kernel Module efi_pstore...
+
+
+         Starting [0;1;39mmodprobe@fuse.serâŠe[0m - Load Kernel Module fuse[   15.065274] systemd[1]: Mounting sys-fs-fuse-connections.mount - FUSE Control File System...
+...
+
+
+         Starting [0;1;39mmodprobe@loop.serâŠe[0m - Load Kerne[   15.080001] systemd[1]: Mounting sys-kernel-config.mount - Kernel Configuration File System...
+l Module loop...[   15.090563] systemd[1]: systemd-pstore.service - Platform Persistent Storage Archival was skipped because of an unmet condition check (ConditionDirectoryNotEmpty=/sys/fs/pstore).
+
+
+
+         Starting [0;1;39msystemd-modules-lâŠrvice[0m - Load Kernel Modul[   15.112902] systemd[1]: Starting systemd-random-seed.service - Load/Save Random Seed...
+es...
+
+
+       [   15.122567] systemd[1]: systemd-repart.service - Repartition Root Disk was skipped because no trigger condition checks were met.
+  Starting [0;1;39msystemd-remount-fâŠnt Root and Kernel File Systems...
+
+
+         S[   15.141620] systemd[1]: Starting systemd-sysctl.service - Apply Kernel Variables...
+tarting [0;1;39msystemd-udev-trigâŠ[0m - Coldplug All udev Devices...
+
+
+[[0;32m  OK  [0m] M[   15.157533] systemd[1]: Starting systemd-sysusers.service - Create System Users...
+ounted [0;1;39mdev-hugepages.mount[0m - Huge Pages File System.
+
+
+[[0;32m  OK  [0m] Mounted [0;1;39mdev-mqueue.mount[âŠ- POSIX Message Queue Fil[   15.177879] systemd[1]: Mounted sys-fs-fuse-connections.mount - FUSE Control File System.
+e System.
+
+
+[[0;32m  OK  [0m][   15.189363] systemd[1]: Mounted sys-kernel-config.mount - Kernel Configuration File System.
+ Mounted [0;1;39msys-kernel-debug.mâŠn[   15.201157] systemd[1]: Finished systemd-random-seed.service - Load/Save Random Seed.
+t[0m - Kernel Debug File System.
+
+
+[[0;32m  OK  [0m][   15.213232] systemd[1]: Finished systemd-sysctl.service - Apply Kernel Variables.
+ Mounted [0;1;39msys-kernel-tracingâŠn[   15.224291] systemd[1]: first-boot-complete.target - First Boot Complete was skipped because of an unmet condition check (ConditionFirstBoot=yes).
+t[0m - Kernel Trace File System[   15.240061] systemd[1]: Finished systemd-udev-trigger.service - Coldplug All udev Devices.
+.
+
+
+[[0;32m  OK  [0m] Finishe[   15.251576] systemd[1]: Finished systemd-sysusers.service - Create System Users.
+d [0;1;39mfake-hwclock.servâŠ Restore / save the current clock.
+
+
+[[0;32m  OK  [0m] Finishe[   15.266921] systemd[1]: Starting systemd-tmpfiles-setup-dev.service - Create Static Device Nodes in /dev...
+d [0;1;39mkeyboard-setup.seâŠ- Set the console keyboard layout.
+
+
+[[0;32m  OK  [0m] Finished [0;1;39mkmod-static-nodesâŠreate List of Static Device Nodes.
+
+
+[[0;32m  OK  [0m] Finished [0;1;39mmodprobe@configfsâŠ[0m - Load Kernel Module configfs.
+
+
+[[0;32m  OK  [0m] Finished [0;1;39mmodprobe@dm_mod.sâŠe[0m - Load Kernel Module dm_mod.
+
+
+[[0;32m  OK  [0m] Finished [0;1;39mmodprobe@drm.service[0m - Load Kernel Module drm.
+
+
+[[0;32m  OK  [0m] Finished [0;1;39mmodprobe@efi_pstoâŠm - Load Kernel Module efi_pstore.
+
+
+[[0;32m  OK  [0m] Finished [0;1;39mmodprobe@fuse.service[0m - Load Kernel Module fuse.
+
+
+[[0;32m  OK  [0m] Finished [0;1;39mmodprobe@loop.service[0m - Load Kernel Module loop.
+
+
+[[0;32m  OK  [0m] Finished [0;1;39msystemd-modules-lâŠservice[0m - Loa[   15.347038] systemd[1]: Finished systemd-tmpfiles-setup-dev.service - Create Static Device Nodes in /dev.
+d Kernel Modules.
+
+
+[[0;32m  O[   15.358747] systemd[1]: Reached target local-fs-pre.target - Preparation for Local File Systems.
+K  [0m] Finished [0;1;39msystemd-remount-fâŠount Root and Kernel File Systems.
+
+
+         Mo[   15.375836] systemd[1]: Mounting tmp.mount - /tmp...
+unting [0;1;39msys-fs-fuse-conneâŠ[0m - FUSE Control File System...
+
+
+         Mounting [0;[   15.389578] systemd[1]: Starting systemd-udevd.service - Rule-based Manager for Device Events and Files...
+1;39msys-kernel-configâŠernel Configuration File System...
+
+
+ [   15.404552] systemd[1]: Mounted tmp.mount - /tmp.
+        Starting [0;1;39msystemd-random-seâŠice[0m - Load/Save Random Seed...
+
+
+         Starting [0;1;39msystemd-sysctl.seâŠce[0m - Apply Kernel Variables...
+
+
+         Starting [0;1;39msystemd-sysusers.âŠrvice[0m - Create System Users...
+
+
+[[0;32m  OK  [0m] Mounted [0;1;39msys-fs-fuse-connecâŠnt[0m - FUSE Control File System.
+
+
+[[0;32m  OK  [0m] Mounted [0;1;39msys-kernel-config.âŠ Kernel Configuration File System.
+
+
+[[0;32m  [   15.449058] pcieport 0000:00:01.0: AER: Correctable error message received from 0000:01:00.0
+OK  [0m[   15.457899] pci 0000:01:00.0: PCIe Bus Error: severity=Correctable, type=Physical Layer, (Receiver ID)
+] Finish[   15.467833] pci 0000:01:00.0:   device [168c:003e] error status/mask=00000081/00006000
+ed [0;1[   15.476493] pci 0000:01:00.0:    [ 0] RxErr                  (First)
+;39msyst[   15.483467] pci 0000:01:00.0:    [ 7] BadDLLP               
+emd-rand[   15.489799] pcieport 0000:00:01.0: AER: Correctable error message received from 0000:01:00.0
+om-seâŠrvice[0m - Load/Save Random Seed.
+
+
+[[0;32m  OK  [0m] Finished [0;1;39msystemd-sysctl.service[0m - Apply Kernel Variables.
+
+
+[[0;32m  OK  [0m] Finished [0;1;39msystemd-udev-trigâŠe[0m - Coldplug All udev Devices.
+
+
+[[0;32m  OK  [0m] Finished [0;1;39msystemd-sysusers.service[0m - Create System Users.
+
+
+         Starting [0;1;39msystemd-tmpfiles-âŠate Static Device Nodes in /dev...
+
+
+[[0;32m  OK  [0m] Finished [0;1;39msystemd-tmpfiles-âŠreate Static Device Nodes in /dev.
+
+
+[[0;32m  OK  [0m] Reached target [0;1;39mlocal-fs-prâŠreparation for Local File Systems.
+
+
+         Mounting [0;1;39mtmp.mount[0m - /tmp...
+
+
+         Starting [0;1;39msystemd-udevd.serâŠger for Device Events and Files...
+
+
+[[0;32m  OK  [0m] Mounted [0;1;39mtmp.mount[0m - /tmp.
+
+
+[   15.600170] systemd[1]: Started systemd-udevd.service - Rule-based Manager for Device Events and Files.
+[[0;32m  OK  [0m] Started [0;1;39msystemd-udevd.servâŠnager for Device Events and Files.
+
+
+[   15.616790] systemd[1]: Starting plymouth-start.service - Show Plymouth Boot Screen...
+         Starting [0;1;39mplymouth-start.seâŠ[0m - Show Plymouth Boot Screen...
+
+
+[   15.685052] systemd[1]: Started plymouth-start.service - Show Plymouth Boot Screen.
+[[0;32m  OK  [0m] Started [0;[   15.692512] systemd[1]: systemd-ask-password-console.path - Dispatch Password Requests to Console Directory Watch was skipped because of an unmet condition check (ConditionPathExists=!/run/plymouth/pid).
+1;39mplymouth-st[   15.712225] systemd[1]: Started systemd-ask-password-plymouth.path - Forward Password Requests to Plymouth Directory Watch.
+art.serâŠe[0m - Show Plymouth Boot Screen.
+
+
+[[0;32m  OK  [0m] Started [0;[   15.729881] systemd[1]: Reached target cryptsetup.target - Local Encrypted Volumes.
+1;39msystemd-ask[   15.738910] systemd[1]: Reached target paths.target - Path Units.
+-passwoâŠuests to Plymouth Directory Watch.
+
+
+[[0;32m  OK  [0m] Reached target [0;1;39mcryptsetup.âŠget[0m - Local Encrypted Volumes.
+
+
+[[0;32m  OK  [0m] Reached target [0;1;39mpaths.target[0m - Path Units.
+
+
+[   15.926925] systemd[1]: Found device dev-ttyS0.device - /dev/ttyS0.
+[[0;32m  OK  [0m] Found device [0;1;39mdev-ttyS0.device[0m - /dev/ttyS0.
+
+
+[   16.248122] systemd[1]: Found device dev-disk-by\x2duuid-941C\x2d6C3B.device - SanDisk_3.2Gen1 ARMBI_EFI.
+[[0;32m  OK  [0m] Found device [0;1;39mdev-disk-by\xâŠe[0m - SanDisk_3.2Gen1 ARMBI_EFI.
+
+
+[   16.265922] systemd[1]: Starting systemd-fsck@dev-disk-by\x2duuid-941C\x2d6C3B.service - File System Check on /dev/disk/by-uuid/941C-6C3B...
+         Starting [0;1;39msystemd-fsck@dev-âŠ on /dev/disk/by-uuid/941C-6C3B...
+
+
+[   16.312133] pcieport 0000:00:01.0: AER: Correctable error message received from 0000:01:00.0
+[   16.313793] systemd[1]: Started systemd-fsckd.service - File System Check Daemon to report status.
+[   16.318428] pci 0000:01:00.0: PCIe Bus Error: severity=Correctable, type=Physical Layer, (Receiver ID)
+[   16.336596] pci 0000:01:00.0:   device [168c:003e] error status/mask=00000001/00006000
+[   16.336613] pci 0000:01:00.0:    [ 0] RxErr                  (First)
+[[0;32m  OK  [0m] Started [0;1;39msystemd-fsckd.servâŠtem Check Daemon to report status.
+
+
+[   16.383020] pcieport 0000:00:01.0: AER: Correctable error message received from 0000:01:00.0
+[   16.389386] pci 0000:01:00.0: PCIe Bus Error: severity=Correctable, type=Physical Layer, (Receiver ID)
+[   16.398506] pci 0000:01:00.0:   device [168c:003e] error status/mask=00000001/00006000
+[   16.406373] pci 0000:01:00.0:    [ 0] RxErr                  (First)
+[   16.504492] pcieport 0000:00:01.0: AER: Correctable error message received from 0000:01:00.0
+[   16.510798] pci 0000:01:00.0: PCIe Bus Error: severity=Correctable, type=Physical Layer, (Receiver ID)
+[   16.520013] pci 0000:01:00.0:   device [168c:003e] error status/mask=00000001/00006000
+[   16.527866] pci 0000:01:00.0:    [ 0] RxErr                  (First)
+[   16.586427] nouveau 57000000.gpu: deferred probe timeout, ignoring dependency
+[   16.595986] tegra-host1x 50000000.host1x: deferred probe timeout, ignoring dependency
+[   16.602039] tegra-host1x 50000000.host1x: failed to get reset: -517
+[   16.604838] cfg80211: Loading compiled-in X.509 certificates for regulatory database
+[   16.615387] nouveau 57000000.gpu: deferred probe timeout, ignoring dependency
+[   16.617892] systemd[1]: Finished systemd-fsck@dev-disk-by\x2duuid-941C\x2d6C3B.service - File System Check on /dev/disk/by-uuid/941C-6C3B.
+[   16.625173] tegra-host1x 50000000.host1x: deferred probe timeout, ignoring dependency
+[   16.641924] Loaded X.509 cert 'sforshee: 00b28ddf47aef9cea7'
+[   16.643327] tegra-host1x 50000000.host1x: failed to get reset: -517
+[[0;32m  OK  [0m] Finished [0;1;39msystemd-fsck@dev-âŠck on /dev/disk/by-uuid/941C-6[   16.661586] nouveau 57000000.gpu: deferred probe timeout, ignoring dependency
+C3B.
+
+
+[   16.670058] systemd[1]: Mounting boot-efi.mount - /boot/efi...
+         Mounting [0;1;39mboot-efi.moun[   16.680277] nouveau 57000000.gpu: NVIDIA GM20B (12b000a1)
+t[0m - /boot/efi...
+
+
+[   16.689304] nouveau 57000000.gpu: imem: using DMA API
+[   16.700912] Loaded X.509 cert 'wens: 61c038651aabdcf94bd0ac7ff06c7248db18c600'
+[   16.750641] tegra_soctherm 700e2000.thermal-sensor: missing thermtrips, will use critical trips as shut down temp
+[   16.758286] at24 0-0050: 256 byte 24c02 EEPROM, read-only
+[   16.760376] systemd[1]: Mounted boot-efi.mount - /boot/efi.
+[   16.772227] systemd[1]: Reached target local-fs.target - Local File Systems.
+[[0;32m  OK  [0m] Mounted [0;1;39mboot-efi.mount[0m - /boot/efi.
+
+
+[[0;32m  OK  [0m] Reached target [0;1[   16.786008] systemd[1]: Starting armbian-zram-config.service - Armbian ZRAM config...
+;39mloca[   16.793424] tegra_soctherm 700e2000.thermal-sensor: thermtrip: will shut down when cpu reaches 102500 mC
+l-fs.tar[   16.804852] tegra_soctherm 700e2000.thermal-sensor: throttrip: will throttle when cpu reaches 102500 mC
+get[0m - Local File Sys[   16.816291] tegra_soctherm 700e2000.thermal-sensor: thermtrip: will shut down when gpu reaches 103000 mC
+tems.
+
+
+         Starti[   16.827764] systemd[1]: Starting console-setup.service - Set console font and keymap...
+ng [0;1[   16.829122] tegra_soctherm 700e2000.thermal-sensor: throttrip: will throttle when gpu reaches 103000 mC
+;39marmb[   16.840776] at24 0-0057: 256 byte 24c02 EEPROM, read-only
+ian-zram[   16.847647] tegra_soctherm 700e2000.thermal-sensor: thermtrip: will shut down when pll reaches 103000 mC
+-confâŠrvice[0m - Armbian ZRAM config...
+
+
+  [   16.865893] tegra_soctherm 700e2000.thermal-sensor: thermtrip: will shut down when mem reaches 103000 mC
+       Starting [0;1;39mconsole-setup.s[   16.878895] systemd[1]: Starting plymouth-read-write.service - Tell Plymouth To Write Out Runtime Data...
+erâŠm - Set console font and keymap...
+
+
+         Starting [0;1;39mplymouth-read-wriâŠmouth To Write Out Runtime Data...
+
+
+[   16.943996] systemd[1]: Starting systemd-binfmt.service - Set Up Additional Binary Formats...
+         Starting [0;1;39msystemd-binfmt.seâŠet Up Additional Binary Formats...
+
+
+[   16.978234] nouveau 57000000.gpu: drm: VRAM: 0 MiB
+[   16.980918] nouveau 57000000.gpu: drm: GART: 1048576 MiB
+[   16.989822] systemd[1]: Starting systemd-machine-id-commit.service - Commit a transient machine-id on disk...
+         Starting [0;1;39msystemd-machine-iâŠ a transient machine-id on disk...
+
+
+[   17.031292] nouveau 57000000.gpu: drm: MM: using COPY for buffer copies
+[   17.040594] systemd[1]: Finished plymouth-read-write.service - Tell Plymouth To Write Out Runtime Data.
+[   17.063377] tegra-adma 702e2000.dma-controller: Tegra210 ADMA driver registered 22 channels
+[   17.070411] [drm] Initialized nouveau 1.4.0 for 57000000.gpu on minor 0
+[   17.083365] systemd[1]: Received SIGRTMIN+20 from PID 164 (plymouthd).
+[[0;32m  OK  [0m] Finished [0;1;39mplymouth-read-wriâŠlymouth To Write Out Runtime Data.
+
+
+[   17.095813] tegra-host1x 50000000.host1x: deferred probe timeout, ignoring dependency
+[   17.101841] systemd[1]: proc-sys-fs-binfmt_misc.automount: Got automount request for /proc/sys/fs/binfmt_misc, triggered by 400 (systemd-binfmt)
+[   17.113990] tegra-host1x 50000000.host1x: failed to get reset: -517
+[   17.131239] tegra-host1x 50000000.host1x: deferred probe timeout, ignoring dependency
+[   17.138267] tegra-host1x 50000000.host1x: failed to get reset: -517
+[   17.138705] Bluetooth: Core ver 2.22
+[   17.139104] systemd[1]: Mounting proc-sys-fs-binfmt_misc.mount - Arbitrary Executable File Formats File System...
+         Mounting [0;1;39mproc-sys-fs-binfmâŠutable File Formats File System...
+
+
+[   17.164146] NET: Registered PF_BLUETOOTH protocol family
+[   17.167311] spi-nor spi0.0: supply vcc not found, using dummy regulator
+[   17.169576] Bluetooth: HCI device and connection manager initialized
+[   17.183655] Bluetooth: HCI socket layer initialized
+[   17.188403] Bluetooth: L2CAP socket layer initialized
+[   17.192468] Bluetooth: SCO socket layer initialized
+[   17.225209] systemd[1]: Mounted proc-sys-fs-binfmt_misc.mount - Arbitrary Executable File Formats File System.
+[[0;32m  OK  [0m] Mounted [0;1;39mproc-sys-fs-binfmtâŠecutable File Formats File System.
+
+
+[   17.266825] systemd[1]: Finished systemd-binfmt.service - Set Up Additional Binary Formats.
+[[0;32m  OK  [0m] Finished [0;1;39msystemd-binfmt.seâŠ Set Up Additional Binary Formats.
+
+
+[   17.328576] tegra-host1x 50000000.host1x: deferred probe timeout, ignoring dependency
+[   17.345678] systemd[1]: Listening on systemd-rfkill.socket - Load/Save RF Kill Switch Status /dev/rfkill Watch.
+[[0;32m  OK  [0m] Listening on [0;1;39msystemd-rfkilâŠl Switch Status /dev/r[   17.359402] tegra-host1x 50000000.host1x: failed to get reset: -517
+fkill Watch.
+
+
+[   17.383319] pcieport 0000:00:01.0: AER: Correctable error message received from 0000:01:00.0
+[   17.389632] ath10k_pci 0000:01:00.0: PCIe Bus Error: severity=Correctable, type=Physical Layer, (Receiver ID)
+[   17.397262] tegra-host1x 50000000.host1x: deferred probe timeout, ignoring dependency
+[   17.399504] ath10k_pci 0000:01:00.0:   device [168c:003e] error status/mask=00000081/00006000
+[   17.415795] ath10k_pci 0000:01:00.0:    [ 0] RxErr                  (First)
+[   17.422299] tegra-host1x 50000000.host1x: failed to get reset: -517
+[   17.422709] ath10k_pci 0000:01:00.0:    [ 7] BadDLLP               
+[   17.458710] systemd[1]: etc-machine\x2did.mount: Deactivated successfully.
+[   17.487396] pcieport 0000:00:01.0: AER: Correctable error message received from 0000:01:00.0
+[   17.493658] ath10k_pci 0000:01:00.0: PCIe Bus Error: severity=Correctable, type=Data Link Layer, (Receiver ID)
+[   17.498944] ath10k_pci 0000:01:00.0: enabling device (0000 -> 0002)
+[   17.503643] ath10k_pci 0000:01:00.0:   device [168c:003e] error status/mask=00000080/00006000
+[   17.518504] ath10k_pci 0000:01:00.0:    [ 7] BadDLLP               
+[   17.528869] systemd[1]: Finished systemd-machine-id-commit.service - Commit a transient machine-id on disk.
+[[0;32m  OK  [0m] Finished [0;1;39msystemd-machine-iâŠit a transient machine-id on disk.
+
+
+[   17.545472] ath10k_pci 0000:01:00.0: pci irq msi oper_irq_mode 2 irq_mode 0 reset_mode 0
+[   17.618989] systemd[1]: Reached target usb-gadget.target - Hardware activated USB gadget.
+[   17.623603] tegra-host1x 50000000.host1x: deferred probe timeout, ignoring dependency
+[[0;32m  OK  [0m] Reached target [0;1;39musb-gadget.âŠm - Hardware activated[   17.638679] tegra-host1x 50000000.host1x: failed to get reset: -517
+ USB gad[   17.643432] usbcore: registered new interface driver btusb
+get.
+
+
+[   17.647458] zram: Added device: zram0
+[   17.664132] tegra-host1x 50000000.host1x: deferred probe timeout, ignoring dependency
+[   17.672485] Bluetooth: hci0: using rampatch file: qca/rampatch_usb_00000302.bin
+[   17.674429] systemd[1]: Starting systemd-rfkill.service - Load/Save RF Kill Switch Status...
+[   17.677599] Bluetooth: hci0: QCA: patch rome 0x302 build 0x3e8, firmware rome 0x302 build 0x111
+         Starting [0;1;39msystemd-rfkill.seâŠLoad/Save RF Kill Switch [   17.700081] zram: Added device: zram1
+Status...
+
+
+[   17.710194] zram: Added device: zram2
+[   17.723414] tegra-host1x 50000000.host1x: failed to get reset: -517
+[   17.772099] tegra-host1x 50000000.host1x: deferred probe timeout, ignoring dependency
+[   17.796827] systemd[1]: Reached target bluetooth.target - Bluetooth Support.
+[[0;32m  OK  [0m] Reached target [0;1;39mbluetooth.target[0m - Bluet[   17.806899] tegra-host1x 50000000.host1x: failed to get reset: -517
+ooth Support.
+
+
+[   17.839278] ath10k_pci 0000:01:00.0: qca6174 hw3.2 target 0x05030000 chip_id 0x00340aff sub 1028:0310
+[   17.840924] zswap: loaded using pool lzo
+[   17.846292] ath10k_pci 0000:01:00.0: kconfig debug 0 debugfs 1 tracing 1 dfs 0 testmode 0
+[   17.860383] ath10k_pci 0000:01:00.0: firmware ver WLAN.RM.4.4.1-00309- api 6 features wowlan,ignore-otp,mfp crc32 0793bcf2
+[   17.879450] tegra-host1x 50000000.host1x: deferred probe timeout, ignoring dependency
+[   17.898512] tegra-host1x 50000000.host1x: failed to get reset: -517
+[   17.962310] systemd[1]: Started systemd-rfkill.service - Load/Save RF Kill Switch Status.
+[[0;32m  OK  [0m] Started [0;1;39msystemd-rfkill.serâŠ- Load/Save RF Kill Switch Status.
+
+
+[   17.987062] tegra-host1x 50000000.host1x: deferred probe timeout, ignoring dependency
+[   17.999257] tegra-host1x 50000000.host1x: failed to get reset: -517
+[   18.008465] ath10k_pci 0000:01:00.0: board_file api 2 bmi_id N/A crc32 d2863f91
+[   18.048843] zram0: detected capacity change from 0 to 3971240
+[   18.078319] Bluetooth: hci0: using NVM file: qca/nvm_usb_00000302.bin
+[   18.111357] Bluetooth: hci0: HCI Enhanced Setup Synchronous Connection command is advertised, but not supported.
+[   18.112383] tegra-host1x 50000000.host1x: deferred probe timeout, ignoring dependency
+[   18.127815] tegra-host1x 50000000.host1x: failed to get reset: -517
+[   18.157950] ath10k_pci 0000:01:00.0: htt-ver 3.87 wmi-op 4 htt-op 3 cal otp max-sta 32 raw 0 hwcrypto 1
+[   18.160258] tegra-host1x 50000000.host1x: deferred probe timeout, ignoring dependency
+[   18.173227] tegra-host1x 50000000.host1x: failed to get reset: -517
+[   18.186741] Adding 1985616k swap on /dev/zram0.  Priority:5 extents:1 across:1985616k SS
+[   18.190135] tegra-host1x 50000000.host1x: deferred probe timeout, ignoring dependency
+[   18.200864] tegra-host1x 50000000.host1x: failed to get reset: -517
+[   18.218070] tegra-host1x 50000000.host1x: deferred probe timeout, ignoring dependency
+[   18.223971] tegra-host1x 50000000.host1x: failed to get reset: -517
+[   18.249405] tegra-host1x 50000000.host1x: deferred probe timeout, ignoring dependency
+[   18.260069] ath: EEPROM regdomain: 0x6c
+[   18.260976] input: NVIDIA Jetson Nano HDA HDMI/DP,pcm=3 as /devices/platform/70030000.hda/sound/card0/input1
+[   18.261721] ath: EEPROM indicates we should expect a direct regpair map
+[   18.263846] tegra-host1x 50000000.host1x: failed to get reset: -517
+[   18.279767] tegra-host1x 50000000.host1x: deferred probe timeout, ignoring dependency
+[   18.284323] ath: Country alpha2 being used: 00
+[   18.293506] tegra-host1x 50000000.host1x: failed to get reset: -517
+[   18.296539] ath: Regpair used: 0x6c
+[   18.310545] zram1: detected capacity change from 0 to 102400
+[   18.327279] tegra-host1x 50000000.host1x: deferred probe timeout, ignoring dependency
+[   18.340803] tegra-host1x 50000000.host1x: failed to get reset: -517
+[   18.369552] tegra-host1x 50000000.host1x: deferred probe timeout, ignoring dependency
+[   18.375540] tegra-host1x 50000000.host1x: failed to get reset: -517
+[   18.399727] ath10k_pci 0000:01:00.0 wlp1s0: renamed from wlan0
+[   18.403955] systemd[1]: Finished armbian-zram-config.service - Armbian ZRAM config.
+[[0;32m  OK  [0m] Finished [0;1;39marmbian-zram-confâŠservice[0m - Armbian ZRAM config.
+
+
+[   18.440921] systemd[1]: Starting armbian-ramlog.service - Armbian memory supported logging...
+         Starting [0;1;39marmbian-ramlog.seâŠrmbian memory supported logging...
+
+
+[   18.520669] systemd[1]: systemd-ask-password-console.path - Dispatch Password Requests to Console Directory Watch was skipped because of an unmet condition check (ConditionPathExists=!/run/plymouth/pid).
+[   18.557834] systemd[1]: Starting modprobe@dm_mod.service - Load Kernel Module dm_mod...
+         Starting [0;1;39mmodprobe@dm_mod.sâŠ[0m - Load Kernel Module dm_mod...
+
+
+[   18.578067] EXT4-fs (zram1): mounted filesystem 715cb7ad-b8ec-4526-803f-865312d470ad r/w without journal. Quota mode: none.
+[   18.582243] systemd[1]: Starting modprobe@efi_pstore.service - Load Kernel Module efi_pstore...
+         Starting [0;1;39mmodprobe@efi_pstoâŠ- Load Kernel Module efi_pstore...
+
+
+[   18.610763] systemd[1]: Starting modprobe@loop.service - Load Kernel Module loop...
+[   18.613241] tegra-host1x 50000000.host1x: deferred probe timeout, ignoring dependency
+         Starting [0;1;39mmodprobe@loop.serâŠe[0m - Load Kernel Module loop...
+
+
+[   18.650421] tegra-host1x 50000000.host1x: failed to get reset: -517
+[   18.655902] systemd[1]: modprobe@dm_mod.service: Deactivated successfully.
+[   18.663830] systemd[1]: Finished modprobe@dm_mod.service - Load Kernel Module dm_mod.
+[[0;32m  OK  [0m] Finished [0;1;39mmodprobe@dm_mod.sâŠe[0m [   18.676824] systemd[1]: modprobe@efi_pstore.service: Deactivated successfully.
+- Load Kernel Module dm_mod.
+
+
+[   18.690680] systemd[1]: Finished modprobe@efi_pstore.service - Load Kernel Module efi_pstore.
+[[0;32m  OK  [0m] Finished [0;1;39mmodprobe@e[   18.700511] systemd[1]: modprobe@loop.service: Deactivated successfully.
+fi_pstoâŠm - Load Kerne[   18.709384] systemd[1]: Finished modprobe@loop.service - Load Kernel Module loop.
+l Module efi_pstore.
+
+
+[[0;32m  OK  [0m] Finished [0;1;39mmodprobe@loop.service[0m - Load Kernel Module loop.
+
+
+[   18.734261] systemd[1]: systemd-ask-password-console.path - Dispatch Password Requests to Console Directory Watch was skipped because of an unmet condition check (ConditionPathExists=!/run/plymouth/pid).
+[   18.757673] systemd[1]: Starting modprobe@dm_mod.service - Load Kernel Module dm_mod...
+         Starting [0;1;39mmodprobe@dm_mod.sâŠ[0m - Load Kernel Module dm_mod...
+
+
+[   18.772672] systemd[1]: Starting modprobe@efi_pstore.service - Load Kernel Module efi_pstore...
+         Starting [0;1;39mmodprobe@efi_pstoâŠ- Load Kernel Module efi_pstore...
+
+
+[   18.788347] systemd[1]: Starting modprobe@loop.service - Load Kernel Module loop...
+         Starting [0;1;39mmodprobe@loop.serâŠe[0m - Load Kern[   18.799159] systemd[1]: modprobe@dm_mod.service: Deactivated successfully.
+el Module loop...
+
+
+[   18.808601] systemd[1]: Finished modprobe@dm_mod.service - Load Kernel Module dm_mod.
+[[0;32m  OK  [0m] Finished [0;1;39mmo[   18.819464] systemd[1]: modprobe@efi_pstore.service: Deactivated successfully.
+dprobe@dm_mod.sâŠe[0m [   18.828451] systemd[1]: Finished modprobe@efi_pstore.service - Load Kernel Module efi_pstore.
+- Load Kernel Module dm_mod.
+
+
+[   18.840598] systemd[1]: modprobe@loop.service: Deactivated successfully.
+[[0;32m  OK  [0m] Finished [0;1;39mmo[   18.849637] systemd[1]: Finished modprobe@loop.service - Load Kernel Module loop.
+dprobe@efi_pstoâŠm - Load Kernel Module[   18.861038] systemd[1]: systemd-pstore.service - Platform Persistent Storage Archival was skipped because of an unmet condition check (ConditionDirectoryNotEmpty=/sys/fs/pstore).
+ efi_pstore.
+
+
+[[0;32m[   18.878537] systemd[1]: systemd-repart.service - Repartition Root Disk was skipped because no trigger condition checks were met.
+  OK  [0m] Finished [0;1;39mmodprobe@loop.service[0m - Load Kernel Module loop.
+
+
+[   19.067070] systemd[1]: Finished armbian-ramlog.service - Armbian memory supported logging.
+[[0;32m  OK  [0m] Finished [0;1;39marmbian-ramlog.seâŠ Armbian memory supported logging.
+
+
+[   19.084083] systemd[1]: Starting systemd-journald.service - Journal Service...
+         Starting [0;1;39msystemd-journald.service[0m - Journal Service...
+
+
+[   19.315819] systemd[1]: Started systemd-journald.service - Journal Service.
+[[0;32m  OK  [0m] Started [0;1;39msystemd-journald.service[0m - Journal Service.
+
+
+         Starting [0;1;39msystemd-journal-fâŠh Journal to Persistent Storage...
+
+
+[   19.367503] systemd-journald[550]: Received client request to flush runtime journal.
+[[0;32m  OK  [0m] Finished [0;1;39msystemd-journal-fâŠush Journal to Persistent Storage.
+
+
+         Starting [0;1;39msystemd-tmpfiles-âŠte System Files and Directories...
+
+
+[[0;32m  OK  [0m] Finished [0;1;39msystemd-tmpfiles-âŠeate System Files and Directories.
+
+
+         Mounting [0;1;39mrun-rpc_pipefs.mount[0m - RPC Pipe File System...
+
+
+         Starting [0;1;39mrpcbind.service[0m - RPC bind portmap service...
+
+
+         Starting [0;1;39msystemd-resolved.âŠe[0m - Network Name Resolution...
+
+
+         Starting [0;1;39msystemd-update-utâŠrd System Boot/Shutdown in UTMP...
+
+
+[[0;1;31mFAILED[0m] Failed to start [0;1;39mconsole-seâŠ[0m - Set console font and keymap.
+
+
+See 'systemctl status console-setup.service' for details.
+
+
+[[0;32m  OK  [0m] Finished [0;1;39msystemd-update-utâŠcord System Boot/Shutdown in UTMP.
+
+
+[[0;32m  OK  [0m] Started [0;1;39mrpcbind.service[0m - RPC b[   19.644631] RPC: Registered named UNIX socket transport module.
+ind port[   19.651337] RPC: Registered udp transport module.
+map serv[   19.656687] RPC: Registered tcp transport module.
+ice.
+
+
+[   19.662046] RPC: Registered tcp-with-tls transport module.
+[[0;32m[   19.668201] RPC: Registered tcp NFSv4.1 backchannel transport module.
+  OK  [0m] Reached target [0;1;39mrpcbind.target[0m - RPC Port Mapper.
+
+
+[[0;32m  OK  [0m] Mounted [0;1;39mrun-rpc_pipefs.mount[0m - RPC Pipe File System.
+
+
+[[0;32m  OK  [0m] Reached target [0;1;39mrpc_pipefs.target[0m.
+
+
+[[0;32m  OK  [0m] Reached target [0;1;39mnfs-client.target[0m - NFS client services.
+
+
+[[0;32m  OK  [0m] Reached target [0;1;39mremote-fs-pâŠeparation for Remote File Systems.
+
+
+[[0;32m  OK  [0m] Reached target [0;1;39mremote-fs.target[0m - Remote File Systems.
+
+
+[   19.887360] aer_ratelimit: 5 callbacks suppressed
+[   19.887395] pcieport 0000:00:01.0: AER: Correctable error message received from 0000:01:00.0
+[   19.898268] ath10k_pci 0000:01:00.0: PCIe Bus Error: severity=Correctable, type=Data Link Layer, (Receiver ID)
+[   19.908216] ath10k_pci 0000:01:00.0:   device [168c:003e] error status/mask=00000080/00006000
+[   19.916712] ath10k_pci 0000:01:00.0:    [ 7] BadDLLP               
+[   19.958339] pcieport 0000:00:01.0: AER: Correctable error message received from 0000:01:00.0
+[   19.964645] ath10k_pci 0000:01:00.0: PCIe Bus Error: severity=Correctable, type=Physical Layer, (Receiver ID)
+[   19.964656] ath10k_pci 0000:01:00.0:   device [168c:003e] error status/mask=00000001/00006000
+[   19.964665] ath10k_pci 0000:01:00.0:    [ 0] RxErr                  (First)
+[[0;32m  OK  [0m] Started [0;1;39msystemd-resolved.sâŠice[0m - Network Name Resolution.
+
+
+[[0;32m  OK  [0m] Reached target [0;1;39mnss-lookup.âŠm - Host and Network Name Lookups.
+
+
+[[0;32m  OK  [0m] Reached target [0;1;39msysinit.target[0m - System Initialization.
+
+
+[[0;32m  OK  [0m] Started [0;1;39msystemd-tmpfiles-câŠ Cleanup of Temporary Directories.
+
+
+[[0;32m  OK  [0m] Listening on [0;1;39mdbus.socket[âŠ- D-Bus System Message Bus Socket.
+
+
+[[0;32m  OK  [0m] Reached target [0;1;39msockets.target[0m - Socket Units.
+
+
+         Starting [0;1;39marmbian-resize-fiâŠ[0m - Armbian filesystem resize...
+
+
+[   20.118066] pcieport 0000:00:01.0: AER: Correctable error message received from 0000:01:00.0
+[   20.124329] ath10k_pci 0000:01:00.0: PCIe Bus Error: severity=Correctable, type=Physical Layer, (Receiver ID)
+[   20.134221] ath10k_pci 0000:01:00.0:   device [168c:003e] error status/mask=00000001/00006000
+[   20.142692] ath10k_pci 0000:01:00.0:    [ 0] RxErr                  (First)
+[   20.187452] pcieport 0000:00:01.0: AER: Correctable error message received from 0000:01:00.0
+[   20.193787] ath10k_pci 0000:01:00.0: PCIe Bus Error: severity=Correctable, type=Data Link Layer, (Receiver ID)
+[   20.203652] ath10k_pci 0000:01:00.0:   device [168c:003e] error status/mask=00000080/00006000
+[   20.212130] ath10k_pci 0000:01:00.0:    [ 7] BadDLLP               
+[   20.336518] EXT4-fs (sda2): resizing filesystem from 1296128 to 7443451 blocks
+[   20.551950] pcieport 0000:00:01.0: AER: Correctable error message received from 0000:01:00.0
+[   20.558259] ath10k_pci 0000:01:00.0: PCIe Bus Error: severity=Correctable, type=Physical Layer, (Receiver ID)
+[   20.568115] ath10k_pci 0000:01:00.0:   device [168c:003e] error status/mask=00000001/00006000
+[   20.576588] ath10k_pci 0000:01:00.0:    [ 0] RxErr                  (First)
+[   21.288823] pcieport 0000:00:01.0: AER: Correctable error message received from 0000:01:00.0
+[   21.295083] ath10k_pci 0000:01:00.0: PCIe Bus Error: severity=Correctable, type=Physical Layer, (Receiver ID)
+[   21.304932] ath10k_pci 0000:01:00.0:   device [168c:003e] error status/mask=00000001/00006000
+[   21.313432] ath10k_pci 0000:01:00.0:    [ 0] RxErr                  (First)
+[   21.514100] pcieport 0000:00:01.0: AER: Correctable error message received from 0000:01:00.0
+[   21.520326] ath10k_pci 0000:01:00.0: PCIe Bus Error: severity=Correctable, type=Data Link Layer, (Receiver ID)
+[   21.530312] ath10k_pci 0000:01:00.0:   device [168c:003e] error status/mask=00000080/00006000
+[   21.538824] ath10k_pci 0000:01:00.0:    [ 7] BadDLLP               
+[   21.818021] EXT4-fs (sda2): resized filesystem to 7443451
+[   22.350620] pcieport 0000:00:01.0: AER: Correctable error message received from 0000:01:00.0
+[   22.357079] ath10k_pci 0000:01:00.0: PCIe Bus Error: severity=Correctable, type=Data Link Layer, (Receiver ID)
+[   22.366820] ath10k_pci 0000:01:00.0:   device [168c:003e] error status/mask=00000080/00006000
+[   22.375325] ath10k_pci 0000:01:00.0:    [ 7] BadDLLP               
+[[0;32m  OK  [0m] Finished [0;1;39marmbian-resize-fiâŠe[0m - Armbian filesystem resize.
+
+
+[[0;32m  OK  [0m] Reached target [0;1;39mbasic.target[0m - Basic System.
+
+
+         Starting [0;1;39malsa-restore.servâŠ- Save/Restore Sound Card State...
+
+
+[[0;32m  OK  [0m] Started [0;1;39mcron.service[0m -âŠkground program processing daemon.
+
+
+         Starting [0;1;39mdbus.service[0m - D-Bus System Message Bus...
+
+
+         Starting [0;1;39me2scrub_reap.servâŠe ext4 Metadata Check Snapshots...
+
+
+         Starting [0;1;39mrng-tools-debian.âŠLSB: rng-tools (Debian variant)...
+
+
+         Starting [0;1;39mrsyslog.service[0m - System Logging Service...
+
+
+         Starting [0;1;39msysfsutils.servicâŠ variables from /etc/sysfs.conf...
+
+
+         Starting [0;1;39msystemd-logind.seâŠice[0m - User Login Management...
+
+
+[[0;32m  OK  [0m] Finished [0;1;39malsa-restore.servâŠm - Save/Restore Sound Card State.
+
+
+[[0;32m  OK  [0m] Reached target [0;1;39msound.target[0m - Sound Card.
+
+
+[[0;32m  OK  [0m] Started [0;1;39mrsyslog.service[0m - System Logging Service.
+
+
+[[0;32m  OK  [0m] Started [0;1;39mdbus.service[0m - D-Bus System Message Bus.
+
+
+         Starting [0;1;39mNetworkManager.service[0m - Network Manager...
+
+
+         Starting [0;1;39mwpa_supplicant.service[0m - WPA supplicant...
+
+
+[[0;32m  OK  [0m] Finished [0;1;39me2scrub_reap.servâ[   23.159084] pcieport 0000:00:01.0: AER: Correctable error message received from 0000:01:00.0
+Šine ext4 Metad[   23.168787] ath10k_pci 0000:01:00.0: PCIe Bus Error: severity=Correctable, type=Physical Layer, (Receiver ID)
+ata Check Snapsh[   23.179813] ath10k_pci 0000:01:00.0:   device [168c:003e] error status/mask=00000001/00006000
+ots.
+
+
+[   23.179835] ath10k_pci 0000:01:00.0:    [ 0] RxErr                  (First)
+[[0;32m  OK  [0m] Started [0;1;39mrng-tools-debian.sâŠ- LSB: rng-tools (Debian variant).
+
+
+[[0;32m  OK  [0m] Started [0;1;39msysfsutils.serviceâŠfs variables from /etc/sysfs.conf.
+
+
+[   23.225521] systemd-journald[550]: Received client request to relinquish /var/log/journal/d40b0dc9429a44b891cbaef7c60cde72 access.
+[   23.301703] pcieport 0000:00:01.0: AER: Correctable error message received from 0000:01:00.0
+[   23.308076] ath10k_pci 0000:01:00.0: PCIe Bus Error: severity=Correctable, type=Physical Layer, (Receiver ID)
+[   23.317926] ath10k_pci 0000:01:00.0:   device [168c:003e] error status/mask=00000001/00006000
+[   23.326587] ath10k_pci 0000:01:00.0:    [ 0] RxErr                  (First)
+[[0;32m  OK  [0m] Started [0;1;39mwpa_supplicant.service[0m - WPA supplicant.
+
+
+[[0;32m  OK  [0m] Started [0;1;39msystemd-logind.service[0m - User Login Management.
+
+
+[[0;32m  OK  [0m] Started [0;1;39mNetworkManager.service[0m - Network Manager.
+
+
+[[0;32m  OK  [0m] Reached target [0;1;39mnetwork.target[0m - Network.
+
+
+[[0;32m  OK  [0m] Reached target [0;1;39mnetwork-online.target[0m - Network is Online.
+
+
+         Starting [0;1;39mchrony.service[0m - chrony, an NTP client/server...
+
+
+         Starting [0;1;39mopenvpn.service[0m - OpenVPN service...
+
+
+         Starting [0;1;39mrc-local.serviceâŠm - /etc/rc.local Compatibility...
+
+
+         Starting [0;1;39mrpc-statd-notify.âŠ- Notify NFS peers of a restart...
+
+
+         Starting [0;1;39mssh.service[0m - OpenBSD Secure Shell server...
+
+
+         Starting [0;1;39msystemd-user-sessâŠvice[0m - Permit User Sessions...
+
+
+[[0;32m  OK  [0m] Started [0;1;39munattended-upgradeâŠ0m - Unattended Upgrades Shutdown.
+
+
+[[0;32m  OK  [0m] Started [0;1;39mvnstat.service[0m - vnStat network traffic monitor.
+
+
+[[0;32m  OK  [0m] Finished [0;1;39mopenvpn.service[0m - OpenVPN service.
+
+
+[[0;32m  OK  [0m] Started [0;1;39mrc-local.service[0m - /etc/rc.local Compatibility.
+
+
+[[0;32m  OK  [0m] Started [0;1;39mrpc-statd-notify.sâŠm - Notify NFS peers of a restart.
+
+
+[[0;32m  OK  [0m] Finished [0;1;39msystemd-user-sessâŠervice[0m - Permit User Sessions.
+
+
+         Starting [0;1;39mplymouth-quit-waiâŠ until boot process finishes up...
+
+
+         Starting [0;1;39mplymouth-quit.serâŠ Terminate Plymouth Boot Screen...
+
+
+         Starting [0;1;39msystemd-hostnamed.service[0m - Hostname Service...
+
+
+[[0;32m  OK  [0m] Finished [0;1;39mplymouth-quit.serâŠ - Terminate Plymouth Boot Screen.
+
+
+[[0;32m  OK  [0m] Finished [0;1;39mplymouth-quit-waiâŠld until boot process finishes up.
+
+
+[[0;32m  OK  [0m] Started [0;1;39mchrony.service[0m - chrony, an NTP client/server.
+
+
+
+
+
+jetson-nano login: root (automatic login)
+
+
+
+[   24.364951] fbcon: Taking over console
+[   24.953229] Generic FE-GE Realtek PHY r8169-0-200:00: attached PHY driver (mii_bus:phy_addr=r8169-0-200:00, irq=MAC)
+[   25.141548] r8169 0000:02:00.0 end0: Link is Down
+[   25.557821] aer_ratelimit: 3 callbacks suppressed
+[   25.557862] pcieport 0000:00:01.0: AER: Correctable error message received from 0000:01:00.0
+[   25.568958] ath10k_pci 0000:01:00.0: PCIe Bus Error: severity=Correctable, type=Data Link Layer, (Receiver ID)
+[   25.578806] ath10k_pci 0000:01:00.0:   device [168c:003e] error status/mask=00000080/00006000
+[   25.587454] ath10k_pci 0000:01:00.0:    [ 7] BadDLLP               
+[   25.694436] pcieport 0000:00:01.0: AER: Correctable error message received from 0000:01:00.0
+[   25.700657] ath10k_pci 0000:01:00.0: PCIe Bus Error: severity=Correctable, type=Data Link Layer, (Receiver ID)
+[   25.710632] ath10k_pci 0000:01:00.0:   device [168c:003e] error status/mask=00000080/00006000
+[   25.719109] ath10k_pci 0000:01:00.0:    [ 7] BadDLLP               
+[   25.928463] pcieport 0000:00:01.0: AER: Correctable error message received from 0000:01:00.0
+[   25.934778] ath10k_pci 0000:01:00.0: PCIe Bus Error: severity=Correctable, type=Physical Layer, (Receiver ID)
+[   25.944667] ath10k_pci 0000:01:00.0:   device [168c:003e] error status/mask=00000001/00006000
+[   25.953137] ath10k_pci 0000:01:00.0:    [ 0] RxErr                  (First)
+[   26.415258] pcieport 0000:00:01.0: AER: Multiple Correctable error message received from 0000:01:00.0
+[   26.422375] pcieport 0000:00:01.0: PCIe Bus Error: severity=Correctable, type=Data Link Layer, (Transmitter ID)
+[   26.432672] pcieport 0000:00:01.0:   device [10de:0fae] error status/mask=00001000/00002000
+[   26.440930] pcieport 0000:00:01.0:    [12] Timeout               
+[   26.446969] ath10k_pci 0000:01:00.0: PCIe Bus Error: severity=Correctable, type=Data Link Layer, (Receiver ID)
+[   26.456741] ath10k_pci 0000:01:00.0:   device [168c:003e] error status/mask=00000040/00006000
+[   26.465338] ath10k_pci 0000:01:00.0:    [ 6] BadTLP                
+[   26.465354] ath10k_pci 0000:01:00.0: AER:   Error of this Agent is reported first
+[   26.569915] pcieport 0000:00:01.0: AER: Correctable error message received from 0000:01:00.0
+[   26.576143] ath10k_pci 0000:01:00.0: PCIe Bus Error: severity=Correctable, type=Data Link Layer, (Receiver ID)
+[   26.586105] ath10k_pci 0000:01:00.0:   device [168c:003e] error status/mask=00000080/00006000
+[   26.594564] ath10k_pci 0000:01:00.0:    [ 7] BadDLLP               
+[   26.715306] pcieport 0000:00:01.0: AER: Correctable error message received from 0000:01:00.0
+[   26.721696] ath10k_pci 0000:01:00.0: PCIe Bus Error: severity=Correctable, type=Data Link Layer, (Receiver ID)
+[   26.731617] ath10k_pci 0000:01:00.0:   device [168c:003e] error status/mask=00000080/00006000
+[   26.740082] ath10k_pci 0000:01:00.0:    [ 7] BadDLLP               
+[   27.120497] pcieport 0000:00:01.0: AER: Correctable error message received from 0000:01:00.0
+[   27.126873] ath10k_pci 0000:01:00.0: PCIe Bus Error: severity=Correctable, type=Physical Layer, (Receiver ID)
+[   27.137231] ath10k_pci 0000:01:00.0:   device [168c:003e] error status/mask=00000001/00006000
+[   27.145114] ath10k_pci 0000:01:00.0:    [ 0] RxErr                  (First)
+[   28.257920] pcieport 0000:00:01.0: AER: Correctable error message received from 0000:01:00.0
+[   28.264258] ath10k_pci 0000:01:00.0: PCIe Bus Error: severity=Correctable, type=Data Link Layer, (Receiver ID)
+[   28.274217] ath10k_pci 0000:01:00.0:   device [168c:003e] error status/mask=00000080/00006000
+[   28.282714] ath10k_pci 0000:01:00.0:    [ 7] BadDLLP               
+[   28.548092] pcieport 0000:00:01.0: AER: Correctable error message received from 0000:01:00.0
+[   28.554511] ath10k_pci 0000:01:00.0: PCIe Bus Error: severity=Correctable, type=Data Link Layer, (Receiver ID)
+[   28.564812] ath10k_pci 0000:01:00.0:   device [168c:003e] error status/mask=00000080/00006000
+[   28.573042] ath10k_pci 0000:01:00.0:    [ 7] BadDLLP               
+[   29.308725] pcieport 0000:00:01.0: AER: Correctable error message received from 0000:01:00.0
+[   29.315010] ath10k_pci 0000:01:00.0: PCIe Bus Error: severity=Correctable, type=Data Link Layer, (Receiver ID)
+[   29.325007] ath10k_pci 0000:01:00.0:   device [168c:003e] error status/mask=00000080/00006000
+[   29.333412] ath10k_pci 0000:01:00.0:    [ 7] BadDLLP               
+
+Waiting for system to finish booting ...
+[   30.860574] pcieport 0000:00:01.0: AER: Correctable error message received from 0000:01:00.0
+[   30.866847] ath10k_pci 0000:01:00.0: PCIe Bus Error: severity=Correctable, type=Physical Layer, (Receiver ID)
+[   30.876748] ath10k_pci 0000:01:00.0:   device [168c:003e] error status/mask=00000001/00006000
+[   30.885295] ath10k_pci 0000:01:00.0:    [ 0] RxErr                  (First)
+[   31.096563] pcieport 0000:00:01.0: AER: Correctable error message received from 0000:01:00.0
+[   31.102825] ath10k_pci 0000:01:00.0: PCIe Bus Error: severity=Correctable, type=Physical Layer, (Receiver ID)
+[   31.112769] ath10k_pci 0000:01:00.0:   device [168c:003e] error status/mask=00000001/00006000
+[   31.121133] ath10k_pci 0000:01:00.0:    [ 0] RxErr                  (First)
+[   32.969591] pcieport 0000:00:01.0: AER: Correctable error message received from 0000:01:00.0
+[   32.975875] ath10k_pci 0000:01:00.0: PCIe Bus Error: severity=Correctable, type=Physical Layer, (Receiver ID)
+[   32.985770] ath10k_pci 0000:01:00.0:   device [168c:003e] error status/mask=00000001/00006000
+[   32.994562] ath10k_pci 0000:01:00.0:    [ 0] RxErr                  (First)
+[   33.034607] pcieport 0000:00:01.0: AER: Correctable error message received from 0000:01:00.0
+[   33.040872] ath10k_pci 0000:01:00.0: PCIe Bus Error: severity=Correctable, type=Data Link Layer, (Receiver ID)
+[   33.050926] ath10k_pci 0000:01:00.0:   device [168c:003e] error status/mask=00000080/00006000
+[   33.059348] ath10k_pci 0000:01:00.0:    [ 7] BadDLLP               
+Waiting for network startup to complete...
+[   34.710980] pcieport 0000:00:01.0: AER: Correctable error message received from 0000:01:00.0
+[   34.717242] ath10k_pci 0000:01:00.0: PCIe Bus Error: severity=Correctable, type=Physical Layer, (Receiver ID)
+[   34.727166] ath10k_pci 0000:01:00.0:   device [168c:003e] error status/mask=00000001/00006000
+[   34.735614] ath10k_pci 0000:01:00.0:    [ 0] RxErr                  (First)
+[   34.839864] pcieport 0000:00:01.0: AER: Correctable error message received from 0000:01:00.0
+[   34.846203] ath10k_pci 0000:01:00.0: PCIe Bus Error: severity=Correctable, type=Data Link Layer, (Receiver ID)
+[   34.856067] ath10k_pci 0000:01:00.0:   device [168c:003e] error status/mask=00000080/00006000
+[   34.864554] ath10k_pci 0000:01:00.0:    [ 7] BadDLLP               
+[   34.870810] pcieport 0000:00:01.0: AER: Correctable error message received from 0000:01:00.0
+[   34.964339] pcieport 0000:00:01.0: AER: Correctable error message received from 0000:01:00.0
+[   34.970812] ath10k_pci 0000:01:00.0: PCIe Bus Error: severity=Correctable, type=Physical Layer, (Receiver ID)
+[   34.980667] ath10k_pci 0000:01:00.0:   device [168c:003e] error status/mask=00000001/00006000
+[   34.988967] ath10k_pci 0000:01:00.0:    [ 0] RxErr                  (First)
+[   35.574839] pcieport 0000:00:01.0: AER: Correctable error message received from 0000:01:00.0
+[   35.581472] ath10k_pci 0000:01:00.0: PCIe Bus Error: severity=Correctable, type=Data Link Layer, (Receiver ID)
+[   35.591126] ath10k_pci 0000:01:00.0:   device [168c:003e] error status/mask=00000080/00006000
+[   35.599516] ath10k_pci 0000:01:00.0:    [ 7] BadDLLP               
+[H[J[3JWelcome to [1m[97mArmbian-unofficial[0m! 
+
+Documentation: [1m[92mhttps://docs.armbian.com/[0m | Community support: [1m[92mhttps://community.armbian.com/[0m
+
+
+[   36.192955] pcieport 0000:00:01.0: AER: Correctable error message received from 0000:01:00.0
+[   36.199407] ath10k_pci 0000:01:00.0: PCIe Bus Error: severity=Correctable, type=Physical Layer, (Receiver ID)
+[   36.209174] ath10k_pci 0000:01:00.0:   device [168c:003e] error status/mask=00000001/00006000
+[   36.217704] ath10k_pci 0000:01:00.0:    [ 0] RxErr                  (First)
+[1A[KIP address: [92m[0m [1m[97mWaiting for local connection![0m Retrying... (6)
+[   36.501651] pcieport 0000:00:01.0: AER: Correctable error message received from 0000:01:00.0
+[   36.507948] ath10k_pci 0000:01:00.0: PCIe Bus Error: severity=Correctable, type=Data Link Layer, (Receiver ID)
+[   36.517870] ath10k_pci 0000:01:00.0:   device [168c:003e] error status/mask=00000080/00006000
+[   36.526324] ath10k_pci 0000:01:00.0:    [ 7] BadDLLP               
+[   36.992083] pcieport 0000:00:01.0: AER: Correctable error message received from 0000:01:00.0
+[   36.998586] ath10k_pci 0000:01:00.0: PCIe Bus Error: severity=Correctable, type=Data Link Layer, (Receiver ID)
+[   37.008577] ath10k_pci 0000:01:00.0:   device [168c:003e] error status/mask=00000080/00006000
+[   37.016776] ath10k_pci 0000:01:00.0:    [ 7] BadDLLP               
+[1A[KIP address: [92m[0m [1m[97mWaiting for local connection![0m Retrying... (5)
+[   37.432530] pcieport 0000:00:01.0: AER: Correctable error message received from 0000:01:00.0
+[   37.438794] ath10k_pci 0000:01:00.0: PCIe Bus Error: severity=Correctable, type=Physical Layer, (Receiver ID)
+[   37.448684] ath10k_pci 0000:01:00.0:   device [168c:003e] error status/mask=00000001/00006000
+[   37.457118] ath10k_pci 0000:01:00.0:    [ 0] RxErr                  (First)
+[   37.557723] pcieport 0000:00:01.0: AER: Correctable error message received from 0000:01:00.0
+[   37.563948] ath10k_pci 0000:01:00.0: PCIe Bus Error: severity=Correctable, type=Data Link Layer, (Receiver ID)
+[   37.574009] ath10k_pci 0000:01:00.0:   device [168c:003e] error status/mask=00000080/00006000
+[   37.582516] ath10k_pci 0000:01:00.0:    [ 7] BadDLLP               
+[   37.853345] AVDD_1V05_PLL: disabling
+[   37.854659] AVDD_SATA_HDMI_DP_1V05: disabling
+[1A[KIP address: [92m[0m [1m[97mWaiting for local connection![0m Retrying... (4)
+[   38.745162] pcieport 0000:00:01.0: AER: Correctable error message received from 0000:01:00.0
+[   38.751488] ath10k_pci 0000:01:00.0: PCIe Bus Error: severity=Correctable, type=Data Link Layer, (Receiver ID)
+[   38.761450] ath10k_pci 0000:01:00.0:   device [168c:003e] error status/mask=00000080/00006000
+[   38.769835] ath10k_pci 0000:01:00.0:    [ 7] BadDLLP               
+[   39.129111] pcieport 0000:00:01.0: AER: Correctable error message received from 0000:01:00.0
+[   39.135648] ath10k_pci 0000:01:00.0: PCIe Bus Error: severity=Correctable, type=Physical Layer, (Receiver ID)
+[   39.145476] ath10k_pci 0000:01:00.0:   device [168c:003e] error status/mask=00000001/00006000
+[   39.153707] ath10k_pci 0000:01:00.0:    [ 0] RxErr                  (First)
+[1A[KIP address: [92m[0m [1m[97mWaiting for local connection![0m Retrying... (3)
+[1A[KIP address: [92m[0m [1m[97mWaiting for local connection![0m Retrying... (2)
+[   41.083805] pcieport 0000:00:01.0: AER: Correctable error message received from 0000:01:00.0
+[   41.090010] ath10k_pci 0000:01:00.0: PCIe Bus Error: severity=Correctable, type=Physical Layer, (Receiver ID)
+[   41.099940] ath10k_pci 0000:01:00.0:   device [168c:003e] error status/mask=00000001/00006000
+[   41.108398] ath10k_pci 0000:01:00.0:    [ 0] RxErr                  (First)
+[1A[KIP address: [92m[0m [1m[97mWaiting for local connection![0m Retrying... (1)
+[1A[KIP address: [92m[0m [1m[31mNetwork connection timeout![0m
+[   42.777656] pcieport 0000:00:01.0: AER: Correctable error message received from 0000:01:00.0
+[   42.783907] ath10k_pci 0000:01:00.0: PCIe Bus Error: severity=Correctable, type=Data Link Layer, (Receiver ID)
+[   42.793892] ath10k_pci 0000:01:00.0:   device [168c:003e] error status/mask=00000080/00006000
+[   42.802316] ath10k_pci 0000:01:00.0:    [ 7] BadDLLP               
+[   42.830121] pcieport 0000:00:01.0: AER: Correctable error message received from 0000:01:00.0
+[   42.836387] ath10k_pci 0000:01:00.0: PCIe Bus Error: severity=Correctable, type=Data Link Layer, (Receiver ID)
+[   42.846366] ath10k_pci 0000:01:00.0:   device [168c:003e] error status/mask=00000080/00006000
+[   42.854797] ath10k_pci 0000:01:00.0:    [ 7] BadDLLP               
+[   42.939396] pcieport 0000:00:01.0: AER: Correctable error message received from 0000:01:00.0
+[   42.945640] ath10k_pci 0000:01:00.0: PCIe Bus Error: severity=Correctable, type=Data Link Layer, (Receiver ID)
+[   42.955631] ath10k_pci 0000:01:00.0:   device [168c:003e] error status/mask=00000080/00006000
+[   42.964068] ath10k_pci 0000:01:00.0:    [ 7] BadDLLP               
+[   43.150474] pcieport 0000:00:01.0: AER: Correctable error message received from 0000:01:00.0
+[   43.156730] ath10k_pci 0000:01:00.0: PCIe Bus Error: severity=Correctable, type=Data Link Layer, (Receiver ID)
+[   43.166952] ath10k_pci 0000:01:00.0:   device [168c:003e] error status/mask=00000080/00006000
+[   43.175304] ath10k_pci 0000:01:00.0:    [ 7] BadDLLP               
+[   43.293280] pcieport 0000:00:01.0: AER: Correctable error message received from 0000:01:00.0
+[   43.299628] ath10k_pci 0000:01:00.0: PCIe Bus Error: severity=Correctable, type=Physical Layer, (Receiver ID)
+[   43.309402] ath10k_pci 0000:01:00.0:   device [168c:003e] error status/mask=00000001/00006000
+[   43.317863] ath10k_pci 0000:01:00.0:    [ 0] RxErr                  (First)
+
+Create root password: [   45.754713] pcieport 0000:00:01.0: AER: Correctable error message received from 0000:01:00.0
+[   45.760951] ath10k_pci 0000:01:00.0: PCIe Bus Error: severity=Correctable, type=Data Link Layer, (Receiver ID)
+[   45.770954] ath10k_pci 0000:01:00.0:   device [168c:003e] error status/mask=00000080/00006000
+[   45.779384] ath10k_pci 0000:01:00.0:    [ 7] BadDLLP               
+[   45.952735] pcieport 0000:00:01.0: AER: Correctable error message received from 0000:01:00.0
+[   45.958982] ath10k_pci 0000:01:00.0: PCIe Bus Error: severity=Correctable, type=Data Link Layer, (Receiver ID)
+[   45.968972] ath10k_pci 0000:01:00.0:   device [168c:003e] error status/mask=00000080/00006000
+[   45.977581] ath10k_pci 0000:01:00.0:    [ 7] BadDLLP               
+[   46.765750] pcieport 0000:00:01.0: AER: Correctable error message received from 0000:01:00.0
+[   46.772008] ath10k_pci 0000:01:00.0: PCIe Bus Error: severity=Correctable, type=Data Link Layer, (Receiver ID)
+[   46.781994] ath10k_pci 0000:01:00.0:   device [168c:003e] error status/mask=00000080/00006000
+[   46.790685] ath10k_pci 0000:01:00.0:    [ 7] BadDLLP               
+[   46.947138] pcieport 0000:00:01.0: AER: Correctable error message received from 0000:01:00.0
+[   46.953375] ath10k_pci 0000:01:00.0: PCIe Bus Error: severity=Correctable, type=Data Link Layer, (Receiver ID)
+[   46.963365] ath10k_pci 0000:01:00.0:   device [168c:003e] error status/mask=00000080/00006000
+[   46.972012] ath10k_pci 0000:01:00.0:    [ 7] BadDLLP               
+[   47.553043] pcieport 0000:00:01.0: AER: Correctable error message received from 0000:01:00.0
+[   47.559262] ath10k_pci 0000:01:00.0: PCIe Bus Error: severity=Correctable, type=Physical Layer, (Receiver ID)
+[   47.569188] ath10k_pci 0000:01:00.0:   device [168c:003e] error status/mask=00000001/00006000
+[   47.577612] ath10k_pci 0000:01:00.0:    [ 0] RxErr                  (First)
+[   50.352578] pcieport 0000:00:01.0: AER: Correctable error message received from 0000:01:00.0
+[   50.358788] ath10k_pci 0000:01:00.0: PCIe Bus Error: severity=Correctable, type=Physical Layer, (Receiver ID)
+[   50.368687] ath10k_pci 0000:01:00.0:   device [168c:003e] error status/mask=00000001/00006000
+[   50.377146] ath10k_pci 0000:01:00.0:    [ 0] RxErr                  (First)
+[   51.393719] pcieport 0000:00:01.0: AER: Correctable error message received from 0000:01:00.0
+[   51.399985] ath10k_pci 0000:01:00.0: PCIe Bus Error: severity=Correctable, type=Physical Layer, (Receiver ID)
+[   51.409864] ath10k_pci 0000:01:00.0:   device [168c:003e] error status/mask=00000001/00006000
+[   51.418308] ath10k_pci 0000:01:00.0:    [ 0] RxErr                  (First)
+[   51.899504] pcieport 0000:00:01.0: AER: Correctable error message received from 0000:01:00.0
+[   51.905756] ath10k_pci 0000:01:00.0: PCIe Bus Error: severity=Correctable, type=Data Link Layer, (Receiver ID)
+[   51.915762] ath10k_pci 0000:01:00.0:   device [168c:003e] error status/mask=00000080/00006000
+[   51.924298] ath10k_pci 0000:01:00.0:    [ 7] BadDLLP               
+[   52.281671] pcieport 0000:00:01.0: AER: Correctable error message received from 0000:01:00.0
+[   52.287902] ath10k_pci 0000:01:00.0: PCIe Bus Error: severity=Correctable, type=Data Link Layer, (Receiver ID)
+[   52.297851] ath10k_pci 0000:01:00.0:   device [168c:003e] error status/mask=00000080/00006000
+[   52.306329] ath10k_pci 0000:01:00.0:    [ 7] BadDLLP               
+[   53.114688] pcieport 0000:00:01.0: AER: Correctable error message received from 0000:01:00.0
+[   53.121105] ath10k_pci 0000:01:00.0: PCIe Bus Error: severity=Correctable, type=Data Link Layer, (Receiver ID)
+[   53.130938] ath10k_pci 0000:01:00.0:   device [168c:003e] error status/mask=00000080/00006000
+[   53.139408] ath10k_pci 0000:01:00.0:    [ 7] BadDLLP               
+[   53.552734] pcieport 0000:00:01.0: AER: Correctable error message received from 0000:01:00.0
+[   53.559019] ath10k_pci 0000:01:00.0: PCIe Bus Error: severity=Correctable, type=Data Link Layer, (Receiver ID)
+[   53.569011] ath10k_pci 0000:01:00.0:   device [168c:003e] error status/mask=00000080/00006000
+[   53.577466] ath10k_pci 0000:01:00.0:    [ 7] BadDLLP               
+[   54.162109] pcieport 0000:00:01.0: AER: Correctable error message received from 0000:01:00.0
+[   54.168462] ath10k_pci 0000:01:00.0: PCIe Bus Error: severity=Correctable, type=Physical Layer, (Receiver ID)
+[   54.178341] ath10k_pci 0000:01:00.0:   device [168c:003e] error status/mask=00000001/00006000
+[   54.186917] ath10k_pci 0000:01:00.0:    [ 0] RxErr                  (First)
+[   54.487591] pcieport 0000:00:01.0: AER: Correctable error message received from 0000:01:00.0
+[   54.493857] ath10k_pci 0000:01:00.0: PCIe Bus Error: severity=Correctable, type=Data Link Layer, (Receiver ID)
+[   54.503787] ath10k_pci 0000:01:00.0:   device [168c:003e] error status/mask=00000080/00006000
+[   54.512302] ath10k_pci 0000:01:00.0:    [ 7] BadDLLP               
+[   55.163492] pcieport 0000:00:01.0: AER: Correctable error message received from 0000:01:00.0
+[   55.169844] ath10k_pci 0000:01:00.0: PCIe Bus Error: severity=Correctable, type=Physical Layer, (Receiver ID)
+[   55.179928] ath10k_pci 0000:01:00.0:   device [168c:003e] error status/mask=00000001/00006000
+[   55.188359] ath10k_pci 0000:01:00.0:    [ 0] RxErr                  (First)
+[   55.474100] pcieport 0000:00:01.0: AER: Correctable error message received from 0000:01:00.0
+[   55.480468] ath10k_pci 0000:01:00.0: PCIe Bus Error: severity=Correctable, type=Data Link Layer, (Receiver ID)
+[   55.490715] ath10k_pci 0000:01:00.0:   device [168c:003e] error status/mask=00000080/00006000
+[   55.498898] ath10k_pci 0000:01:00.0:    [ 7] BadDLLP               
+[   57.080034] pcieport 0000:00:01.0: AER: Correctable error message received from 0000:01:00.0
+[   57.086415] ath10k_pci 0000:01:00.0: PCIe Bus Error: severity=Correctable, type=Data Link Layer, (Receiver ID)
+[   57.096343] ath10k_pci 0000:01:00.0:   device [168c:003e] error status/mask=00000080/00006000
+[   57.104831] ath10k_pci 0000:01:00.0:    [ 7] BadDLLP               
+[   57.204529] pcieport 0000:00:01.0: AER: Correctable error message received from 0000:01:00.0
+[   57.210851] ath10k_pci 0000:01:00.0: PCIe Bus Error: severity=Correctable, type=Physical Layer, (Receiver ID)
+[   57.220714] ath10k_pci 0000:01:00.0:   device [168c:003e] error status/mask=00000001/00006000
+[   57.229204] ath10k_pci 0000:01:00.0:    [ 0] RxErr                  (First)
+[   57.260621] pcieport 0000:00:01.0: AER: Correctable error message received from 0000:01:00.0
+[   57.266955] ath10k_pci 0000:01:00.0: PCIe Bus Error: severity=Correctable, type=Data Link Layer, (Receiver ID)
+[   57.276896] ath10k_pci 0000:01:00.0:   device [168c:003e] error status/mask=00000080/00006000
+[   57.285371] ath10k_pci 0000:01:00.0:    [ 7] BadDLLP               
+[   57.585168] pcieport 0000:00:01.0: AER: Correctable error message received from 0000:01:00.0
+[   57.591419] ath10k_pci 0000:01:00.0: PCIe Bus Error: severity=Correctable, type=Data Link Layer, (Receiver ID)
+[   57.601377] ath10k_pci 0000:01:00.0:   device [168c:003e] error status/mask=00000080/00006000
+[   57.609798] ath10k_pci 0000:01:00.0:    [ 7] BadDLLP               
+[   59.934775] pcieport 0000:00:01.0: AER: Correctable error message received from 0000:01:00.0
+[   59.941120] ath10k_pci 0000:01:00.0: PCIe Bus Error: severity=Correctable, type=Physical Layer, (Receiver ID)
+[   59.950983] ath10k_pci 0000:01:00.0:   device [168c:003e] error status/mask=00000001/00006000
+[   59.959466] ath10k_pci 0000:01:00.0:    [ 0] RxErr                  (First)
+[   60.152013] pcieport 0000:00:01.0: AER: Correctable error message received from 0000:01:00.0
+[   60.158340] ath10k_pci 0000:01:00.0: PCIe Bus Error: severity=Correctable, type=Data Link Layer, (Receiver ID)
+[   60.168275] ath10k_pci 0000:01:00.0:   device [168c:003e] error status/mask=00000080/00006000
+[   60.176778] ath10k_pci 0000:01:00.0:    [ 7] BadDLLP               
+[   61.073387] pcieport 0000:00:01.0: AER: Correctable error message received from 0000:01:00.0
+[   61.079716] ath10k_pci 0000:01:00.0: PCIe Bus Error: severity=Correctable, type=Data Link Layer, (Receiver ID)
+[   61.089657] ath10k_pci 0000:01:00.0:   device [168c:003e] error status/mask=00000080/00006000
+[   61.098194] ath10k_pci 0000:01:00.0:    [ 7] BadDLLP     
