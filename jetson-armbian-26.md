@@ -54,7 +54,7 @@ Backup old dtb and copy patched one in
 ``` bash
 sudo cp -a /mnt/armbian/boot/armbian-dtb-6.18.29-current-arm64 /mnt/armbian/boot/armbian-dtb-6.18.29-current-arm64.bak
 
-sudo cp armbian-dtb-6.18.29-current-arm64.patched /mnt/armbian/boot/armbian-dtb-6.18.28-current-arm64
+sudo cp armbian-dtb-6.18.29-current-arm64.patched /mnt/armbian/boot/armbian-dtb-6.18.29-current-arm64
 ```
 
 Edit grub linux kernel args. This is optional, but I wanted to silence some pci errors from wifi card and add rootwait.
