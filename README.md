@@ -1,5 +1,7 @@
 # Jetson nano 4gb
 
+Looks like jetson is supported again by armbian so this isn't needed anymore.
+
 This repo contains builds of armbian for a jetson nano 4gb and notes on getting them working. I have an a02 board.
 
 My jetson has a dead sd card reader, so the instructions at jetson-original-image-usb.md let me boot from usb with no sd card.
